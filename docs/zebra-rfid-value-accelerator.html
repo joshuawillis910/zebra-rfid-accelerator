@@ -10,13 +10,6 @@
      ZebraMono   = Zebra Mono (Medium, ExtraBold)
      Fallback stack: Arial Narrow Bold → Arial → sans-serif -->
 <style>
-    @font-face { font-family:'ZebraSans'; font-weight:400; font-style:normal; src:url('assets/fonts/ZebraSans-Regular.otf') format('opentype'); }
-    @font-face { font-family:'ZebraSans'; font-weight:700; font-style:normal; src:url('assets/fonts/ZebraSans-CndExtraBold.otf') format('opentype'); }
-    @font-face { font-family:'ZebraSans'; font-weight:700; font-style:italic; src:url('assets/fonts/ZebraSans-Regular.otf') format('opentype'); }
-    @font-face { font-family:'ZebraSans'; font-weight:400; font-style:italic; src:url('assets/fonts/ZebraSans-Italic.otf') format('opentype'); }
-    @font-face { font-family:'ZebraSansCnd'; font-weight:800; font-style:normal; src:url('assets/fonts/ZebraSans-CndExtraBold.otf') format('opentype'); }
-    @font-face { font-family:'ZebraMono'; font-weight:500; font-style:normal; src:url('assets/fonts/ZebraMono-Medium.otf') format('opentype'); }
-    @font-face { font-family:'ZebraMono'; font-weight:800; font-style:normal; src:url('assets/fonts/ZebraMono-ExtraBold.otf') format('opentype'); }
 
 
 
@@ -1222,7 +1215,7 @@ body{font-family:var(--font-body);background:#ffffff;color:#303030;font-size:14p
     </div>
     <div style="padding:12px 16px;background:#f7f8fa;border:1px solid #e2e6ea;border-radius:8px;border-left:3px solid #94a3b8;">
       <div style="font-size:11px;font-weight:700;color:#1a1a2e;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px;">🤖 Copy AI Prompt</div>
-      <div style="font-size:11px;color:#555;line-height:1.55;">Copies the full engagement brief — scenarios, financials, pain signals, evidence — ready to paste into Claude or ChatGPT. Ask it to write an exec summary, prep objection handling, or draft the value story.</div>
+      <div style="font-size:11px;color:#555;line-height:1.55;">Copies the full engagement brief — scenarios, financials, pain signals, evidence — ready to paste into Gemini, Claude, ChatGPT, or any AI. Ask it to write an exec summary, prep objection handling, or draft the value story.<br><br><strong>💡 Solution comparison:</strong> The AI infers your solution type from the BOM and can model a Handheld vs Hybrid vs RTLS comparison — same scenarios, three cost/benefit profiles, one trade-off table for the CFO.</div>
     </div>
   </div>
 </div>
@@ -1475,7 +1468,8 @@ body{font-family:var(--font-body);background:#ffffff;color:#303030;font-size:14p
     </div>
     <div style="padding:10px 12px;border-radius:6px;border:1px solid var(--gray-200);border-top:3px solid #9333ea">
       <div style="font-weight:700;margin-bottom:5px">🤖 Copy AI Prompt</div>
-      Copies a full structured brief to your clipboard — customer context, selected scenarios, financials, ramp assumptions, pain signals, and evidence. Paste into Claude, ChatGPT, or any LLM and say <em>"write an exec summary for a CFO meeting"</em> or <em>"what objections should I prepare for?"</em> — it has everything it needs to go straight to work.
+      Copies a full structured brief to your clipboard — customer context, selected scenarios, financials, ramp assumptions, pain signals, and evidence. Paste into Gemini, Claude, ChatGPT, or any AI and say <em>"write an exec summary for a CFO meeting"</em> or <em>"what objections should I prepare for?"</em> — it has everything it needs to go straight to work.
+      <br><br><strong>Solution comparison:</strong> The AI will infer your solution type (handheld, hybrid, RTLS) from the cost breakdown and flag scenarios that get stronger under a higher tier. Ask it to <em>"model a Handheld vs Hybrid vs RTLS comparison"</em> and it will show you the trade-off table — same scenarios, three cost/benefit profiles — ready to use in a CFO conversation.
     </div>
   </div>
 
@@ -6416,8 +6410,13 @@ Evidence IDs: ${evIds||'—'}`;
 
     // Cost breakdown
     const costLines = (costRows||[]).map(r => {
-      const total = typeof r.total === 'number' ? r.total : (r.qty||0)*(r.unit||0);
-      return `  • ${r.label}: ${fmt(total)} (${r.cadence||'One-time'})`;
+      // Read from yr0/yr1/yr2 (set by defaultCostRows/applyBuckets) or fall back to total/unit
+      const isOneTime = !r.cadence || r.cadence==='one-time' || r.cadence==='other';
+      const total = (r.yr0||0) + (r.yr1||0) + (r.yr2 && !isOneTime ? r.yr2 : 0) ||
+                    (typeof r.total === 'number' ? r.total : (r.qty||0)*(r.unitCost||r.unit||0));
+      const displayTotal = isOneTime ? (r.yr0||0) : (r.yr1||r.yr2||0);
+      const finalTotal = displayTotal || total;
+      return `  • ${r.label}: ${fmt(finalTotal)} (${r.cadence||'one-time'})`;
     }).join('\n');
 
     // Modeling methodology note
@@ -6468,6 +6467,29 @@ Start by doing three things in order:
    After that exchange, offer to go deeper on any of: financial stress-testing, objection prep, CFO narrative, discovery gaps, or scenario sensitivity analysis. Let them drive.
 
 TONE: Conversational, expert, curious. You're a senior colleague, not a chatbot. Don't lecture. Don't bullet everything. Ask one question at a time. Flag anything off in the numbers directly but constructively.
+
+4. SOLUTION TYPE INFERENCE (do this quietly in the background)
+   Look at the cost structure and scenario mix. Infer what solution is being proposed:
+   — Handheld only: low per-site hardware cost, labor-heavy scenarios selected
+   — Hybrid (Handheld + Fixed Gates): mid-range hardware, mix of labor and automation scenarios
+   — RTLS / Full Fixed: high per-site cost, always-on visibility scenarios selected
+
+   If you can infer the solution type, mention it naturally in your read-back:
+   "Based on the BOM this looks like a handheld deployment..."
+
+   Then flag any selected scenarios whose value would materially increase under a higher
+   solution tier, and any scenarios NOT selected that become more relevant with better
+   infrastructure. Frame it as an offer, not a push:
+   "A few of your scenarios get significantly stronger with fixed infrastructure —
+   want me to model a quick comparison so you can show the CFO the trade-off?"
+
+   If the solution type is ambiguous, just ask one question about it.
+
+   If ALL cost line items are zero, the seller hasn't entered the BOM yet.
+   Make it your first question after the read-back:
+   "I notice the cost model is empty — what solution are you proposing?
+   Handheld-only, hybrid with fixed gates, or full RTLS? That changes the
+   cost baseline and which scenarios carry the most weight." Then proceed.
 
 ════════════════════════════════════════════════════════════════════
 ENGAGEMENT DATA
