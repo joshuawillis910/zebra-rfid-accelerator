@@ -1,0 +1,643 @@
+/* ===========================================================
+   BRAND TOKEN SYSTEM  &#8212;  v1.0  &#8212;  SWAP-READY
+   ─────────────────────────────────────────────────────────
+   ZEBRA WEB BRAND SYSTEM &#8212; confirmed from Figma Web Guidelines
+   ─────────────────────────────────────────────────────────
+   CORE PALETTE (80%+ of design must be black/white/gray):
+     Black          #000000   &#8212; primary nav, hero backgrounds
+     White          #FFFFFF   &#8212; surfaces, content backgrounds
+     Gray 50        #F2F2F2   &#8212; page background
+     Gray 100       #E6E6E6   &#8212; borders, dividers
+     Gray 200       #BDBDBD   &#8212; inactive elements
+     Gray 500       #757575   &#8212; secondary text
+     Gray 700       #565656   &#8212; muted text
+     Gray 800       #303030   &#8212; body text
+     Impact Green   #A8F931   &#8212; accent ONLY (max 20% of design)
+     Green 50       #E2FFB6   &#8212; light green tint
+     Blue 700       #003FBD   &#8212; inline text links / breadcrumbs only
+
+   TYPOGRAPHY:
+     Headlines  → ZebraSans Condensed ExtraBold → Arial Narrow Bold
+     Body       → ZebraSans Regular → Helvetica Neue → Arial
+     Labels     → Zebra Mono Extra Bold → Courier New (ALWAYS ALL-CAPS)
+   =========================================================== */
+:root {
+  /* ── ZEBRA BRAND COLORS ── */
+  --brand-black:   #000000;
+  --brand-white:   #FFFFFF;
+  --brand-green:   #A8F931;   /* Impact Green &#8212; use sparingly, max 20% */
+  --brand-green50: #E2FFB6;   /* Green tint */
+  --brand-blue:    #003FBD;   /* Links/breadcrumbs only */
+
+  /* ── GRAY SCALE ── */
+  --gray-50:  #F2F2F2;
+  --gray-100: #E6E6E6;
+  --gray-200: #BDBDBD;
+  --gray-500: #757575;
+  --gray-700: #565656;
+  --gray-800: #303030;
+
+  /* ── SEMANTIC ALIASES (used throughout the app) ── */
+  --navy:    var(--brand-black);
+  --blue:    var(--brand-black);    /* nav/active states use black */
+  --bright:  var(--brand-green);
+  --bg:      var(--gray-50);
+  --surface: var(--brand-white);
+  --border:  var(--gray-100);
+  --text:    var(--gray-800);
+  --muted:   var(--gray-500);
+
+  /* ── STATUS COLORS (kept for benefit classification) ── */
+  --green:  #27AE60; --amber:#F2994A; --red:#EB5757;
+  --gold:   var(--brand-green); --purple:#6B48FF;
+
+  /* ── TYPOGRAPHY ── */
+  --head: 'ZebraSansCnd', 'ZebraSans', 'Arial Narrow', 'Arial', sans-serif;  /* Zebra Sans Condensed ExtraBold */
+  --body: 'ZebraSans', 'Helvetica Neue', 'Arial', sans-serif;  /* Zebra Sans Regular */
+  --mono: 'ZebraMono', 'Courier New', monospace;           /* Zebra Mono ExtraBold */
+
+  /* ── SHAPE ── */
+  --r:6px; --shadow:0 1px 8px rgba(0,0,0,.08);
+
+  /* ── ZEBRA SANS FONTS (embedded) ── */
+  --font-heading: 'ZebraSansCnd', 'Arial Narrow', Arial, sans-serif;
+  --font-body:    'ZebraSans', Arial, sans-serif;
+  --font-mono:    'ZebraSans', 'Courier New', monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--font-body);background:#ffffff;color:#303030;font-size:14px;line-height:1.6;min-height:100vh;color-scheme:light;-webkit-text-size-adjust:100%}
+
+/* NAV &#8212; Zebra black bar with green accent */
+.topbar{background:var(--brand-black);height:56px;padding:0 28px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:200;border-bottom:3px solid var(--brand-green)}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-logo{display:flex;align-items:center}
+.brand-name{font-family:var(--head);font-weight:700;font-size:14px;color:var(--brand-white);letter-spacing:.3px}
+.brand-sub{font-size:10px;color:rgba(255,255,255,.4);font-family:var(--mono);text-transform:uppercase;letter-spacing:1px}
+
+/* SHELL */
+.shell{display:grid;grid-template-columns:240px 1fr;min-height:calc(100vh - 56px)}
+
+/* SIDEBAR &#8212; Zebra black */
+.sidebar{background:var(--brand-black);padding:20px 0;display:flex;flex-direction:column;position:sticky;top:56px;height:calc(100vh - 56px);overflow-y:auto;border-right:1px solid rgba(255,255,255,.08)}
+.sb-section{padding:5px 18px 2px;font-family:var(--mono);font-size:9px;color:rgba(255,255,255,.3);letter-spacing:2px;text-transform:uppercase;margin-top:10px}
+.sb-item{display:flex;align-items:center;gap:9px;padding:8px 18px;cursor:pointer;color:rgba(255,255,255,.5);font-size:12.5px;border-left:3px solid transparent;transition:all .12s}
+.sb-item:hover{background:rgba(255,255,255,.06);color:#fff}
+.sb-item.active{background:var(--brand-green);color:var(--brand-black);border-left-color:var(--brand-green)}
+.sb-item.done{color:rgba(255,255,255,.65)}
+.sb-num{width:18px;height:18px;border-radius:2px;background:rgba(255,255,255,.1);display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:9px;flex-shrink:0;transition:background .15s}
+.sb-item.active .sb-num{background:var(--brand-black);color:var(--brand-green)}
+.sb-item.done .sb-num{background:rgba(168,249,49,.3);color:var(--brand-green)}
+.sb-divider{height:1px;background:rgba(255,255,255,.07);margin:12px 18px}
+.sb-progress{padding:14px 18px 0}
+.sb-prog-label{font-family:var(--mono);font-size:9px;color:rgba(255,255,255,.3);margin-bottom:5px;letter-spacing:.8px;text-transform:uppercase}
+.prog-bar{height:2px;background:rgba(255,255,255,.1);overflow:hidden}
+.prog-fill{height:100%;background:var(--brand-green);transition:width .4s}
+
+/* MAIN */
+.main{padding:32px 36px;max-width:880px;overflow-y:auto;height:calc(100vh - 56px);background:#ffffff}
+.panel{display:none;background:#ffffff}.panel.active{display:block;background:#ffffff}
+
+/* STEP HEADER */
+.step-eyebrow{font-family:var(--mono);font-size:10px;color:var(--gray-500);letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.step-title{font-family:var(--head);font-size:28px;font-weight:700;color:var(--brand-black);line-height:1.15;margin-bottom:7px}
+.step-desc{color:var(--gray-700);font-size:13px;max-width:620px;margin-bottom:24px}
+
+/* CARDS */
+.card{background:#ffffff;border:1px solid var(--border);border-radius:var(--r);padding:22px;box-shadow:var(--shadow);margin-bottom:16px}
+.card-title{font-family:var(--head);font-size:13px;font-weight:700;color:var(--brand-black);margin-bottom:14px;display:flex;align-items:center;gap:8px;text-transform:uppercase;letter-spacing:.5px}
+/* Table card: edge-to-edge, no double-border */
+.card-table{padding:0;overflow:hidden}
+.card-table .card-title{padding:16px 16px 12px;margin-bottom:0;border-bottom:1px solid var(--gray-100)}
+.card-table .vtbl-wrap{border-radius:0}
+.card-table .vtbl th,.card-table .vtbl td{padding:9px 14px}
+/* Scenario expand rows */
+.vtbl tr.sc-data-row{cursor:pointer;transition:background .1s}
+.vtbl tr.sc-data-row:hover td{background:rgba(168,249,49,.08)!important}
+.vtbl tr.sc-data-row td:first-child::before{content:'▶';font-size:8px;color:var(--gray-500);margin-right:7px;transition:transform .2s;display:inline-block}
+.vtbl tr.sc-data-row.expanded td:first-child::before{transform:rotate(90deg);color:var(--brand-black)}
+.vtbl tr.sc-expand-panel td{padding:0!important;border-bottom:2px solid var(--gray-200)}
+.vtbl tr.sc-expand-panel{display:none}
+.vtbl tr.sc-expand-panel.open{display:table-row}
+.sc-expand-inner{padding:14px 16px;background:var(--gray-50);display:grid;grid-template-columns:1fr 1fr 1fr;gap:12px;align-items:center}
+.sc-stat{text-align:center}
+.sc-stat-val{font-family:var(--head);font-size:20px;font-weight:700;color:var(--brand-black);line-height:1}
+.sc-stat-label{font-family:var(--mono);font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-top:3px}
+.sc-bar-wrap{grid-column:1/-1;margin-top:4px}
+.sc-bar-label{display:flex;justify-content:space-between;font-family:var(--mono);font-size:9px;color:var(--muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:.4px}
+.sc-bar-track{height:10px;background:var(--gray-200);border-radius:2px;overflow:hidden}
+.sc-bar-fill{height:100%;background:var(--brand-black);border-radius:2px;transition:width .5s ease}
+.sc-bar-fill.rev{background:var(--gray-700)}
+.sc-bar-fill.soft{background:var(--gray-500)}
+.sc-bar-fill.wc{background:var(--gray-200);border:1px solid var(--gray-400)}
+.card-label{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--gray-500);margin-bottom:12px;text-transform:uppercase;letter-spacing:.8px}
+
+/* VERTICAL SELECTOR BUTTONS */
+.vertical-btns{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:4px}
+.vbtn{padding:0 18px;height:36px;border:1.5px solid var(--gray-200);border-radius:18px;font-size:13px;font-weight:500;cursor:pointer;background:var(--brand-white);color:var(--gray-800);transition:all .13s;white-space:nowrap}
+.vbtn:hover{border-color:var(--brand-black);color:var(--brand-black)}
+.vbtn.active{background:var(--brand-black);border-color:var(--brand-black);color:var(--brand-white);font-weight:600}
+
+/* BADGES &#8212; Zebra Mono label style */
+.badge{font-family:var(--mono);font-size:9px;padding:2px 7px;border-radius:2px;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.b-blue{background:#000;color:var(--brand-green)}
+.b-green{background:rgba(168,249,49,.15);color:#2a5500}
+.b-amber{background:rgba(242,153,74,.14);color:#7a4a10}
+.b-purple{background:rgba(107,72,255,.1);color:#3a2080}
+.b-red{background:rgba(235,87,87,.1);color:#a82020}
+.b-gray{background:var(--gray-100);color:var(--gray-700)}
+
+/* FORM */
+.fg{display:flex;flex-direction:column;gap:4px}
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px}
+.full{grid-column:1/-1}
+.flabel{font-size:11px;font-weight:700;color:var(--text);letter-spacing:.3px;text-transform:uppercase;font-family:var(--mono)}
+.fhint{font-size:10px;color:var(--muted);margin-top:1px;font-family:var(--mono)}
+.finput,.fselect{padding:8px 11px;border:1px solid var(--gray-200);border-radius:4px;font-family:var(--body);font-size:13px;color:var(--text);background:var(--surface);transition:border-color .14s;outline:none;width:100%}
+.finput:focus,.fselect:focus{border-color:var(--brand-black);border-width:2px;background:#fff}
+.finput.hi{border-left:3px solid var(--brand-black)}
+
+/* SLIDERS */
+.srow{display:flex;align-items:center;gap:10px}
+.srow input[type=range]{flex:1;accent-color:var(--brand-black);cursor:pointer}
+.sval{font-family:var(--mono);font-size:11px;color:var(--brand-black);min-width:60px;text-align:right;font-weight:700}
+
+/* CHIPS &#8212; Zebra filter pill spec */
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:14px}
+.chip{padding:0 16px;height:32px;border:1px solid var(--gray-200);border-radius:16px;font-size:13px;font-weight:500;cursor:pointer;transition:all .13s;background:var(--brand-white);color:var(--gray-800);user-select:none;display:inline-flex;align-items:center;line-height:1}
+.chip:hover{border-color:var(--brand-black);color:var(--brand-black)}
+.chip.on{background:var(--brand-green);border-color:var(--brand-green);color:var(--brand-black);font-weight:600}
+.lever-row{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:6px;cursor:pointer;border:1px solid transparent;transition:all .12s}
+.lever-row:hover{background:var(--gray-50);border-color:var(--gray-100)}
+.lever-row.on{background:rgba(168,249,49,.08);border-color:rgba(168,249,49,.4)}
+.lever-check{width:18px;height:18px;border-radius:3px;border:1.5px solid var(--gray-200);display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;color:transparent;transition:all .12s}
+.lever-row.on .lever-check{background:var(--brand-green);border-color:var(--brand-green);color:var(--brand-black)}
+.btn-link{background:none;border:none;color:var(--blue);font-size:12px;cursor:pointer;padding:2px 6px;font-family:var(--body);text-decoration:underline}
+.btn-link:hover{color:var(--brand-black)}
+
+/* SCENARIO CARDS */
+.sc-grid{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.sc-card{border:1px solid var(--border);border-radius:var(--r);padding:14px;cursor:pointer;transition:all .18s;background:var(--surface);position:relative}
+.sc-card:hover{border-color:var(--brand-black)}
+.sc-card.on{border-color:var(--brand-black);border-width:2px;background:rgba(168,249,49,.06)}
+.sc-check{position:absolute;top:10px;right:10px;width:18px;height:18px;border-radius:50%;border:1px solid var(--gray-200);display:flex;align-items:center;justify-content:center;font-size:9px;color:transparent;transition:all .14s}
+.sc-card.on .sc-check{background:var(--brand-green);border-color:var(--brand-green);color:var(--brand-black)}
+.sc-id{font-family:var(--mono);font-size:9px;color:var(--muted);margin-bottom:3px;text-transform:uppercase;letter-spacing:.5px}
+.sc-name{font-family:var(--head);font-size:13px;font-weight:700;color:var(--brand-black);line-height:1.3;padding-right:24px}
+.sc-theme{font-size:11px;color:var(--muted);margin-top:3px}
+.sc-pct{margin-top:8px;font-family:var(--mono);font-size:11px}
+.sc-pct-bar{height:3px;background:var(--gray-100);margin-top:4px;overflow:hidden;border-radius:2px}
+.sc-pct-fill{height:100%;background:var(--brand-green);border-radius:2px}
+
+/* DISCOVERY ACCORDION */
+.acc-item{border:1px solid var(--border);border-radius:8px;overflow:hidden;margin-bottom:10px}
+.acc-head{padding:13px 16px;background:var(--gray-50);cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-weight:600;font-size:13px;color:var(--brand-black);user-select:none}
+.acc-head:hover{background:var(--gray-50)}
+.acc-arrow{font-size:11px;color:var(--muted);transition:transform .2s}
+.acc-item.open .acc-arrow{transform:rotate(180deg)}
+.acc-body{display:none;padding:16px;border-top:1px solid var(--border);background:#ffffff;color:#303030}
+.acc-item.open .acc-body{display:block}
+.acc-body.has-values{border-top-color:var(--green)}
+.acc-item.has-values .acc-head{border-left:3px solid var(--green)}
+
+/* CUSTOMER CHALLENGE BOX */
+.challenge-box{padding:11px 14px;background:var(--gray-50);border-left:3px solid var(--brand-black);border-radius:0 6px 6px 0;font-size:12px;color:var(--text);margin-bottom:10px;line-height:1.6}
+.challenge-box strong{color:var(--brand-black);display:block;font-size:10px;letter-spacing:.5px;text-transform:uppercase;margin-bottom:3px}
+.dq{padding:9px 13px;background:var(--gray-50);border-radius:5px;font-size:12.5px;margin-bottom:6px;line-height:1.5}
+.dq::before{content:"→ ";color:var(--brand-black);font-weight:700}
+
+/* INPUT TABLE */
+.cadence-sel{font-size:10px;padding:3px 5px;width:88px;border:1px solid var(--gray-200);border-radius:4px;background:#fff;color:var(--gray-800);font-family:var(--mono);cursor:pointer}
+.num-input{text-align:right;font-family:var(--mono)}
+
+.itbl{width:100%;border-collapse:collapse;background:#ffffff;color:#303030}
+.itbl th{padding:8px 11px;font-size:10px;font-weight:600;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;background:var(--gray-50);border-bottom:2px solid var(--border);text-align:left}
+.itbl td{padding:9px 11px;border-bottom:1px solid var(--border);vertical-align:middle}
+.itbl tr:last-child td{border-bottom:none}
+.ikey{font-family:var(--mono);font-size:10px;color:var(--blue)}
+.ilabel{font-size:12.5px;font-weight:500}
+.isource{font-size:10px;color:var(--muted);margin-top:1px}
+.iinput{width:100%;padding:6px 9px;border:1px solid var(--border);border-radius:5px;font-family:var(--mono);font-size:12px;color:var(--brand-black);background:var(--gray-50);text-align:right;outline:none}
+.iinput:focus{border-color:var(--blue);background:#fff}
+.iinput.changed{border-color:var(--green);background:rgba(39,174,96,.04)}
+
+/* COST MODEL */
+.cost-tbl{width:100%;border-collapse:collapse}
+.cost-tbl th,.cost-tbl td{padding:9px 12px;font-size:12.5px;border-bottom:1px solid var(--border)}
+.cost-tbl th{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);background:var(--gray-50);text-align:left}
+.cost-tbl td.r{text-align:right;font-family:var(--mono)}
+.cost-tbl .section-row td{background:var(--gray-50);font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;color:var(--muted);padding:7px 12px}
+.cost-tbl .total-row td{font-weight:700;color:var(--brand-black);border-top:2px solid var(--border);background:var(--gray-50)}
+.cost-tbl .editable-input{width:100%;padding:5px 8px;border:1px solid transparent;border-radius:4px;font-family:var(--mono);font-size:12px;text-align:right;background:transparent;outline:none;color:var(--brand-black)}
+.cost-tbl .editable-input:focus{border-color:var(--blue);background:#fff}
+.add-row-btn{margin-top:10px;font-size:11px;color:var(--blue);cursor:pointer;display:flex;align-items:center;gap:5px;font-weight:600;padding:6px 0}
+.add-row-btn:hover{color:#0044aa}
+
+/* KPI CARDS */
+.kpi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:18px;box-shadow:var(--shadow);text-align:center;position:relative;overflow:hidden}
+.kpi::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+.kpi.kgreen::before,.kpi.kblue::before,.kpi.kgold::before{background:var(--brand-green)}
+.kpi.kamber::before{background:var(--amber)}
+.kpi.kpurple::before{background:#6B48FF}
+.kpi.kred::before{background:var(--red)}
+.kpi-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:7px;font-family:var(--mono)}
+.kpi-val{font-family:var(--head);font-size:26px;font-weight:700;color:var(--brand-black);line-height:1;margin-bottom:3px}
+.kpi-sub{font-size:10px;color:var(--muted);font-family:var(--mono)}
+
+
+/* KPI secondary row */
+.kpi-secondary-row{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:22px}
+.kpi-sec{background:var(--gray-50);border:1px solid var(--gray-100);border-radius:4px;padding:10px 14px;display:flex;justify-content:space-between;align-items:center}
+.ks-label{font-family:var(--mono);font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px}
+.ks-val{font-family:var(--mono);font-size:13px;font-weight:700;color:var(--gray-800)}
+.hero-kpi .kpi-val{font-size:30px}
+/* BAR CHART &#8212; Zebra green accent bars */
+.bar-row{display:grid;grid-template-columns:200px 1fr 72px;align-items:center;gap:10px;margin-bottom:8px}
+.bar-name{font-size:11.5px;color:var(--text)}.bar-name span{display:block;font-family:var(--mono);font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+.bar-track{height:20px;background:var(--gray-100);overflow:hidden}
+.bar-fill{height:100%;transition:width .6s ease}
+.bf-hl{background:var(--brand-black)}
+.bf-hc{background:var(--gray-800)}
+.bf-rv{background:var(--gray-700)}
+.bf-sf{background:var(--gray-500)}
+.bf-wc{background:var(--gray-200)}
+.bar-val{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--brand-black);text-align:right}
+
+/* CASHFLOW VIZ */
+.cf-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:8px;margin-top:8px}
+.cf-col{text-align:center}
+.cf-lbl{font-size:10px;color:var(--muted);font-family:var(--mono);margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px}
+.cf-bar-wrap{display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:110px}
+.cf-bar{width:44px;transition:height .5s ease}
+.cf-bar.pos{background:var(--brand-green)}.cf-bar.neg{background:var(--gray-200)}
+.cf-num{font-family:var(--mono);font-size:10px;margin-top:5px;font-weight:700}
+.cf-num.pos{color:var(--brand-black)}.cf-num.neg{color:var(--red)}
+
+/* DELAY SLIDER SECTION */
+.delay-section{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:20px}
+.delay-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:20px;box-shadow:var(--shadow)}
+.delay-slider-wrap{margin:12px 0}
+.missed-items{display:flex;flex-direction:column;gap:8px;margin-top:10px}
+.missed-item{display:flex;justify-content:space-between;align-items:center;padding:8px 12px;background:rgba(235,87,87,.05);border-left:3px solid var(--red)}
+.missed-item .mi-label{font-size:12px;color:var(--text)}
+.missed-item .mi-val{font-family:var(--mono);font-size:12px;font-weight:700;color:var(--red)}
+
+/* FINANCIAL MODEL GRID */
+.fin-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}
+.fin-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--r);padding:16px;text-align:center}
+.fin-label{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;font-weight:700;font-family:var(--mono)}
+.fin-val{font-family:var(--head);font-size:22px;font-weight:700;color:var(--brand-black);margin-bottom:3px}
+.fin-sub{font-size:10px;color:var(--muted);font-family:var(--mono)}
+.fin-card.accent-green{border-top:3px solid var(--brand-green)}
+.fin-card.accent-blue{border-top:3px solid var(--brand-black)}
+.fin-card.accent-amber{border-top:3px solid var(--amber)}
+
+
+/* VALUE SNAPSHOT CARD &#8212; expands below each table row */
+.sc-snapshot{display:grid;grid-template-columns:140px 1fr 220px;gap:0;background:#fff;border-top:1px solid var(--gray-100)}
+.sc-snapshot-donut{display:flex;align-items:center;justify-content:center;padding:20px 8px;background:var(--gray-50);border-right:1px solid var(--gray-100)}
+.sc-snapshot-stats{padding:18px 20px;border-right:1px solid var(--gray-100)}
+.sc-snapshot-right{padding:18px 16px;background:#fafafa}
+.sc-snapshot-title{font-family:var(--head);font-size:13px;font-weight:700;color:var(--brand-black);margin-bottom:2px}
+.sc-snapshot-id{font-family:var(--mono);font-size:9px;color:var(--muted);text-transform:uppercase;letter-spacing:.6px;margin-bottom:12px}
+.sc-snapshot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.sc-snap-stat{background:var(--gray-50);border:1px solid var(--gray-100);padding:8px 10px;border-radius:3px}
+.sc-snap-val{font-family:var(--head);font-size:16px;font-weight:700;color:var(--brand-black);line-height:1.1}
+.sc-snap-lbl{font-family:var(--mono);font-size:8px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-top:3px}
+.sc-snap-inputs{border-top:1px solid var(--gray-100);padding-top:10px;display:flex;flex-direction:column;gap:5px}
+.sc-snap-input-row{display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.sc-snap-input-key{font-size:11px;color:var(--gray-700);line-height:1.3;flex:1}
+.sc-snap-input-val{font-family:var(--mono);font-size:11px;font-weight:700;color:var(--brand-black);white-space:nowrap}
+.sc-snap-oneliner{font-size:12px;font-weight:600;color:var(--brand-black);line-height:1.5;margin-bottom:10px;font-style:italic}
+.sc-snap-challenge{font-size:11px;color:var(--gray-700);line-height:1.6;border-left:2px solid var(--brand-green);padding-left:8px}
+@media(max-width:700px){
+  .sc-snapshot{grid-template-columns:1fr}
+  .sc-snapshot-donut{border-right:none;border-bottom:1px solid var(--gray-100);padding:16px}
+  .sc-snapshot-stats{border-right:none;border-bottom:1px solid var(--gray-100)}
+}
+/* VALUE TABLE &#8212; Zebra simple table anatomy spec */
+
+/* TABLE SCROLL WRAPPER &#8212; all vtbl tables scroll horizontally on mobile */
+.vtbl-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.vtbl-wrap table{min-width:480px}
+/* Tighten vtbl padding on small screens */
+.vtbl{width:100%;border-collapse:collapse}
+.vtbl th,.vtbl td{padding:8px 16px;border-bottom:1px solid var(--gray-200);font-size:13px;line-height:22px;color:var(--brand-black)}
+.vtbl thead tr{background:var(--gray-50);border-bottom:2px solid var(--gray-200)}
+.vtbl th{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--gray-500);font-family:var(--mono);padding:8px 16px}
+/* First col header: 2px Gray 200 rule per spec */
+/* removed vertical divider &#8212; caused mobile render artifact */
+.vtbl .mono{font-family:var(--mono);font-size:13px}
+/* Zebra striping: #F5F6F8 on even rows */
+.vtbl tbody tr:nth-child(even){background:#F5F6F8}
+.vtbl .total-row{background:var(--brand-black)!important}
+.vtbl .total-row td{border-top:2px solid var(--brand-black);color:var(--brand-white);font-weight:700}
+.vtbl .total-row .mono{color:var(--brand-green)}
+.ramp-tag{font-family:var(--mono);font-size:9px;padding:2px 6px;white-space:nowrap;text-transform:uppercase;letter-spacing:.3px;border-radius:2px;font-weight:700}
+
+/* EXEC OUTPUT &#8212; Zebra black hero with green accent */
+.exec-hero{background:var(--brand-black);border-radius:var(--r);padding:32px;margin-bottom:18px;color:#fff;position:relative;overflow:hidden}
+.exec-hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:var(--brand-green)}
+.exec-hero h2{font-family:var(--head);font-size:24px;font-weight:700;margin-bottom:4px}
+.exec-hero p{color:rgba(255,255,255,.5);font-size:12px;margin-bottom:20px}
+.exec-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.ek{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:16px;text-align:center}
+.ek-val{font-family:var(--head);font-size:22px;font-weight:700;color:var(--brand-green);margin-bottom:4px}
+.ek-lab{font-size:10px;color:rgba(255,255,255,.45);letter-spacing:.8px;font-family:var(--mono);text-transform:uppercase}
+
+/* NARRATIVE */
+.narrative{line-height:1.85;font-size:13.5px;color:var(--text)}
+.narrative p{margin-bottom:12px}
+.ev-inline{display:inline;font-family:var(--mono);font-size:9px;color:var(--brand-black);background:var(--brand-green50);padding:1px 5px;border-radius:2px;margin-left:3px;cursor:help;text-transform:uppercase;letter-spacing:.3px}
+
+/* BUTTONS &#8212; Zebra CTA spec (capsule, 40px, sentence case, chevron) */
+.btn{height:40px;padding:0 24px;border-radius:20px;font-family:var(--body);font-size:14px;font-weight:500;cursor:pointer;border:1px solid transparent;transition:all .15s;display:inline-flex;align-items:center;gap:8px;line-height:1;white-space:nowrap}
+/* Primary on light bg: black fill → hover: green fill */
+.btn-primary{background:var(--brand-black);color:var(--brand-white);border-color:var(--brand-black)}.btn-primary:hover{background:var(--brand-green);color:var(--brand-black);border-color:var(--brand-green)}
+/* Secondary: white capsule, gray stroke → hover: black border */
+.btn-outline{background:var(--brand-white);border:1px solid var(--gray-500);color:var(--brand-black)}.btn-outline:hover{border-color:var(--brand-black)}
+/* Green CTA (on dark bg): green fill → hover: green50 */
+.btn-success{background:var(--brand-green);color:var(--brand-black);border-color:var(--brand-green)}.btn-success:hover{background:var(--brand-green50);border-color:var(--brand-green50)}
+/* Tertiary ghost link */
+.btn-amber{background:transparent;color:var(--gray-700);border:none;padding:0 4px;height:auto;font-weight:500;font-size:13px}.btn-amber:hover{color:var(--brand-black);text-decoration:underline}
+.btn-row{display:flex;gap:16px;margin-top:22px;align-items:center;flex-wrap:wrap}
+
+/* ALERTS &#8212; Zebra alert banner spec: 4px left border, no radius */
+.alert{padding:12px 16px;font-size:13px;margin-bottom:14px;display:flex;gap:10px;align-items:flex-start;line-height:1.5;border:1px solid;border-left-width:4px;background:var(--brand-white)}
+.a-info{border-color:var(--brand-blue);background:#f0f4ff;color:var(--gray-800)}
+.a-success{border-color:#27AE60;background:#f0faf4;color:var(--gray-800)}
+.a-warn{border-color:#F2C94C;background:#fdfbec;color:var(--gray-800)}
+.a-error{border-color:#EB5757;background:#fdf0f0;color:var(--gray-800)}
+.a-amber{background:rgba(242,153,74,.09);border:1px solid rgba(242,153,74,.3);color:#6b3a0a}
+.a-strategy{background:var(--gray-50);border:1px solid var(--gray-200);color:var(--brand-black);border-left:4px solid var(--brand-black)}
+
+
+/* EVIDENCE REGISTRY */
+.ev-card{background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:18px;margin-bottom:12px}
+.ev-claim{font-size:12.5px;background:var(--gray-50);padding:9px 12px;border-radius:5px;border-left:3px solid var(--brand-black);margin-top:8px;line-height:1.6}
+
+
+/* DISCLAIMER FOOTER */
+.disclaimer{font-family:var(--mono);font-size:9.5px;color:var(--gray-500);line-height:1.6;padding:12px 0 4px;border-top:1px solid var(--gray-100);margin-top:20px}
+.disclaimer strong{color:var(--gray-700)}
+/* UTILS */
+.divider{height:1px;background:var(--border);margin:16px 0}
+.muted{color:var(--muted)}.mono{font-family:var(--mono)}.bold{font-weight:700}
+.text-green{color:var(--green)}.text-blue{color:var(--blue)}.text-red{color:var(--red)}
+.flex-between{display:flex;justify-content:space-between;align-items:center}
+.mt8{margin-top:8px}.mt16{margin-top:16px}
+/* ===================================================
+   RESPONSIVE &#8212; TABLET ≤900px · MOBILE ≤600px · XS ≤380px
+   =================================================== */
+
+/* hide short labels on desktop */
+.sb-short { display: none; }
+.sb-label { display: inline; }
+
+/* ── TABLET &#8212; iPad portrait / landscape ── */
+@media (max-width: 900px) {
+
+  /* ── Layout: sidebar becomes fixed bottom tab bar ── */
+  .shell { display: block; }
+
+  .sidebar {
+    position: fixed; bottom: 0; left: 0; right: 0; top: auto;
+    height: 60px; flex-direction: row; flex-wrap: nowrap;
+    padding: 0; overflow-x: auto; overflow-y: hidden;
+    border-right: none; border-top: 2px solid rgba(255,255,255,.12);
+    z-index: 500; -webkit-overflow-scrolling: touch;
+    /* prevent scroll bounce showing gap */
+    background: var(--navy);
+  }
+  /* hide desktop-only sidebar elements */
+  .sb-section, .sb-divider, .sb-progress { display: none !important; }
+
+  /* each tab item */
+  .sb-item {
+    flex-direction: column; align-items: center; justify-content: center;
+    flex: 0 0 auto; min-width: 72px; padding: 8px 6px 6px;
+    gap: 4px; border-left: none; border-top: 3px solid transparent;
+    font-size: 9px; line-height: 1.2; text-align: center;
+  }
+  .sb-item.active  { border-top-color: var(--blue); border-left-color: transparent; background: rgba(0,102,204,.2); }
+  .sb-item.done    { color: rgba(255,255,255,.7); }
+  .sb-num { width: 22px; height: 22px; font-size: 10px; }
+
+  /* show short labels on mobile, hide full labels */
+  .sb-label { display: none; }
+  .sb-short { display: block; font-size: 9px; }
+
+  /* ── Topbar ── */
+  .topbar { height: 48px; padding: 0 14px; }
+  .brand-sub { display: none; }
+
+  /* ── Main: full width, scroll above tab bar ── */
+  .main {
+    width: 100%; max-width: 100%; padding: 20px 16px 76px;
+    height: calc(100vh - 48px); overflow-y: auto;
+  }
+
+  /* ── Step header ── */
+  .step-title { font-size: 22px; }
+
+  /* ── Grids ── */
+  .g2 { grid-template-columns: 1fr 1fr; }
+  .g3 { grid-template-columns: 1fr 1fr; }
+  .sc-grid { grid-template-columns: 1fr 1fr; }
+  .kpi-grid { grid-template-columns: 1fr 1fr; }
+  .fin-grid { grid-template-columns: 1fr 1fr; }
+  .exec-kpis { grid-template-columns: 1fr 1fr; }
+  .delay-section { grid-template-columns: 1fr 1fr; }
+  .cf-grid { grid-template-columns: repeat(5, 1fr); }
+
+  /* ── Bar chart ── */
+  .bar-row { grid-template-columns: 130px 1fr 64px; }
+
+  /* ── Scrollable tables ── */
+  .cost-table-wrap, .itbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .cost-table-wrap table { min-width: 600px; }
+  .itbl { min-width: 500px; ;background:#ffffff;color:#303030}
+}
+
+/* ── MOBILE &#8212; phones (portrait & landscape) ── */
+@media (max-width: 600px) {
+
+  /* ── Topbar ── */
+  .topbar { height: 48px; padding: 0 12px; }
+  .brand-name { font-size: 13px; }
+  .brand-logo { width: 26px; height: 26px; font-size: 11px; }
+
+  /* ── Tab bar ── */
+  .sidebar { height: 56px; }
+  .sb-item { min-width: 60px; padding: 7px 4px 5px; }
+  .sb-num { width: 20px; height: 20px; font-size: 9px; }
+  .sb-short { font-size: 8px; }
+
+  /* ── Main ── */
+  .main { padding: 16px 12px 68px; }
+  .step-title { font-size: 20px; }
+  .step-desc { font-size: 12px; }
+  .card { padding: 14px 12px; }
+
+  /* ── All grids → 1 col on phone ── */
+  .g2, .g3 { grid-template-columns: 1fr; }
+  .sc-grid { grid-template-columns: 1fr 1fr; }   /* 2-col stays, cards are small */
+  .kpi-grid { grid-template-columns: 1fr 1fr; }
+  .fin-grid { grid-template-columns: 1fr 1fr; }
+  .exec-kpis { grid-template-columns: 1fr 1fr; }
+  .delay-section { grid-template-columns: 1fr; }
+  .cf-grid { grid-template-columns: repeat(3, 1fr); } /* condense cashflow */
+
+  /* ── Bar chart: label above bar ── */
+  .bar-row { grid-template-columns: 1fr 54px; gap: 4px; }
+  .bar-name { grid-column: 1 / -1; font-size: 11px; }
+
+  /* ── Scrollable tables ── */
+  .cost-table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .cost-table-wrap table { min-width: 560px; }
+  .itbl-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+  .itbl { min-width: 460px; ;background:#ffffff;color:#303030}
+
+  /* ── KPI / fin cards ── */
+  .kpi { padding: 14px 10px; }
+  .kpi-val { font-size: 22px; }
+  .fin-val { font-size: 18px; }
+
+  /* ── Exec hero ── */
+  .exec-hero { padding: 16px; }
+  .exec-hero h2 { font-size: 16px; }
+  .ek-val { font-size: 20px; }
+
+  /* ── Scenario cards ── */
+  .sc-card { padding: 10px; }
+  .sc-name { font-size: 11.5px; }
+
+  /* ── Chips ── */
+  .chip { font-size: 11px; padding: 5px 9px; }
+
+  /* ── Accordion ── */
+  .acc-head { font-size: 12.5px; padding: 11px 13px; }
+
+  /* ── Sliders ── */
+  .srow { flex-wrap: wrap; }
+  .srow input[type=range] { width: 100%; order: 3; }
+  .srow .sval { order: 2; }
+
+  /* ── Buttons ── */
+  .btn-row { flex-direction: column; gap: 8px; }
+  .btn-row .btn { width: 100%; justify-content: center; text-align: center; }
+  .btn { font-size: 12px; padding: 10px 16px; }
+
+  /* ── Form grids ── */
+  .fg { gap: 3px; }
+  .finput, .fselect { font-size: 14px; padding: 10px 11px; } /* bigger tap targets */
+}
+
+/* ── EXTRA SMALL &#8212; iPhone SE, Galaxy A series ── */
+@media (max-width: 390px) {
+  .sb-item { min-width: 52px; }
+  .sb-short { font-size: 7.5px; }
+  .kpi-grid, .fin-grid, .exec-kpis { grid-template-columns: 1fr 1fr; }
+  .vtbl th, .vtbl td { padding: 6px 8px; font-size: 12px; }
+  .sc-grid { grid-template-columns: 1fr; }
+  .main { padding: 14px 10px 66px; }
+  .step-title { font-size: 18px; }
+  .card { padding: 12px 10px; }
+}
+
+@media print {
+  /* ── Hide all chrome ── */
+  .topbar,.sidebar,.btn-row,.add-row-btn,
+  .step-eyebrow,.step-desc,
+  #print-hint,.delay-section,.kpi-secondary-row,
+  #benefit-bars,#cf-chart,.fin-grid,
+  #vtbl-body .sc-expand-panel{display:none!important}
+
+  /* ── Layout reset ── */
+  *{-webkit-print-color-adjust:exact!important;print-color-adjust:exact!important}
+  html,body{background:#fff!important;margin:0;padding:0}
+  .shell{display:block}
+  .main{padding:0;max-width:100%;height:auto;overflow:visible}
+  .panel{display:none!important}
+  #panel-5{display:block!important}
+
+  @page{
+    size:letter portrait;
+    margin:0.6in 0.65in 0.6in 0.65in;
+  }
+
+  /* ── Print header strip (replaces black topbar) ── */
+  #panel-5::before{
+    content:'ZEBRA TECHNOLOGIES — RFID VALUE CASE';
+    display:block;
+    font-family:'Courier New',monospace;
+    font-size:7pt;
+    letter-spacing:2px;
+    color:#757575;
+    border-bottom:2px solid #000;
+    padding-bottom:5pt;
+    margin-bottom:14pt;
+  }
+
+  /* ── Exec hero: invert to white for print ── */
+  .exec-hero{
+    background:#000!important;
+    color:#fff!important;
+    border-radius:4px;
+    padding:18pt 20pt!important;
+    margin-bottom:12pt;
+    break-inside:avoid;
+  }
+  .exec-hero::after{background:#A8F931!important;height:3px}
+  .exec-hero h2{color:#fff!important;font-size:18pt}
+  .exec-hero p{color:rgba(255,255,255,.6)!important}
+  .ek{background:rgba(255,255,255,.08)!important;border-color:rgba(255,255,255,.15)!important}
+  .ek-val{color:#A8F931!important}
+  .ek-lab{color:rgba(255,255,255,.5)!important}
+
+  /* ── Cards ── */
+  .card,.ev-card,.fin-card,.kpi{
+    break-inside:avoid;
+    box-shadow:none!important;
+    border:1px solid #e6e6e6!important;
+    margin-bottom:8pt;
+    padding:10pt 12pt!important;
+  }
+  .card-title{font-size:8pt!important;margin-bottom:8pt}
+
+  /* ── Ramp chart: keep visible ── */
+  #exec-ramp-chart svg{max-width:100%;height:auto}
+
+  /* ── Tables ── */
+  .vtbl-wrap{overflow:visible!important}
+  .vtbl-wrap table{min-width:0!important;width:100%}
+  .vtbl th,.vtbl td{font-size:8pt!important;padding:4pt 6pt!important}
+  .vtbl thead tr{background:#f2f2f2!important}
+  .vtbl .total-row{background:#000!important}
+  .vtbl .total-row td{color:#fff!important}
+  .vtbl .total-row .mono{color:#A8F931!important}
+
+  /* ── Narrative ── */
+  .narrative{font-size:9pt!important;line-height:1.55}
+
+  /* ── Evidence cards ── */
+  .ev-card{padding:8pt!important;margin-bottom:6pt}
+  .ev-claim{font-size:8pt!important}
+
+  /* ── Methodology grid ── */
+  #ramp-methodology-grid > div{border:1px solid #e6e6e6!important;padding:6pt!important}
+
+  /* ── Disclaimer ── */
+  .disclaimer{font-size:7pt!important;border-top:1px solid #e6e6e6;margin-top:10pt;padding-top:6pt}
+
+  /* ── Badges ── */
+  .badge,.b-blue,.b-green,.b-amber,.b-gray{
+    border:1px solid #ccc!important;
+    background:#f2f2f2!important;
+    color:#303030!important;
+  }
+
+  /* ── KPI grid ── */
+  .exec-kpis{grid-template-columns:repeat(4,1fr)!important;gap:8pt!important}
+}

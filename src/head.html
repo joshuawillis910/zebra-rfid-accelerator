@@ -1,0 +1,56 @@
+<head>
+<meta charset="UTF-8">
+  <meta name="color-scheme" content="light only">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zebra RFID Value Accelerator</title>
+<!-- ZEBRA BRAND FONTS — Licensed OTF assets loaded from assets/fonts/
+     ZebraSans   = Zebra Sans (Regular, Bold, BoldItalic, Italic, Condensed ExtraBold)
+     ZebraMono   = Zebra Mono (Medium, ExtraBold)
+     Fallback stack: Arial Narrow Bold → Arial → sans-serif -->
+<!-- PPTXGENJS — OFFLINE-FIRST LOADER v1.1
+     Priority: (1) inline paste below → (2) assets/pptxgen.bundle.js → (3) CDN
+
+     TO GO FULLY OFFLINE — pick one option:
+
+     Option A · Single-file (recommended for air-gap):
+       Download pptxgen.bundle.js and paste its full contents between
+       the script tags marked PASTE BELOW / END PASTE. File grows ~400 KB.
+
+     Option B · Assets folder (easier to update):
+       curl -L https://cdnjs.cloudflare.com/ajax/libs/PptxGenJS/3.12.0/pptxgen.bundle.js \
+            -o assets/pptxgen.bundle.js
+       Keep assets/ next to this HTML. Works offline instantly.
+
+     Option C · Default (online only):
+       Leave everything as-is. CDN loads when internet is available. -->
+
+<!-- Option A: PASTE FULL pptxgen.bundle.js CONTENTS BELOW THIS LINE -->
+<!-- Option A: END PASTE -->
+
+<script>
+/* PptxGenJS loader — tries assets/ then CDN; skips if already loaded inline */
+(function(){
+  if(typeof PptxGenJS!=='undefined'){ window.__pptxReady=true; return; }
+
+  window.__pptxReady  = false;
+  window.__pptxMissing = false;
+
+  function onSuccess(){ window.__pptxReady=true; window.__pptxMissing=false; }
+  function onFail()   { window.__pptxReady=false; window.__pptxMissing=true; }
+
+  function loadCDN(){
+    var cdn=document.createElement('script');
+    cdn.src='https://cdnjs.cloudflare.com/ajax/libs/PptxGenJS/4.0.1/pptxgen.bundle.js';
+    cdn.onload=onSuccess;
+    cdn.onerror=onFail;
+    document.head.appendChild(cdn);
+  }
+
+  var local=document.createElement('script');
+  local.src='assets/pptxgen.bundle.js'; // v4.0.1
+  local.onload=onSuccess;
+  local.onerror=loadCDN;
+  document.head.appendChild(local);
+})();
+</script>
+</head>

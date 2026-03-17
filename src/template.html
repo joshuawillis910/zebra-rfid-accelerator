@@ -1,0 +1,782 @@
+<body>
+
+<nav class="topbar">
+  <div class="brand">
+    <!-- Zebra Technologies Logo — official horizontal white SVG -->
+    <span id="brand-logo-slot" style="display:flex;align-items:center">
+      <div style="height:28px;width:auto;display:block"><svg height="28" style="display:block" id="Horizontal_Logo" data-name="Horizontal Logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 572.31 177.27"> <polygon fill="#fff" points="100.44 53.85 100.43 53.85 100.44 53.86 100.44 53.85"/>
+  <polygon fill="#fff" points="0 94.74 82.81 177.27 82.81 159.68 0 77.13 0 94.74"/>
+  <path fill="#fff" d="M126.4,79.71h0s-12.94-12.94-12.94-12.94h-17.7s-12.96-12.92-12.96-12.92h17.62l-12.82-12.9-17.76.03L35.29,6.62c-2.73,1.14-8.96,5.18-10.76,6.77l32.36,32.27v70.47l25.91,25.82v-17.62l-12.97-12.92v-57.57h12.97v59.18h12.96v-46.26l12.93,12.93v33.33h12.96s0-20.44,0-20.44l-12.96-12.89h17.71Z"/>
+  <path fill="#fff" d="M90.41,20.48c0-11.32-9.19-20.48-20.55-20.48v40.97c11.35,0,20.55-9.17,20.55-20.48Z"/>
+  <path fill="#fff" d="M43.95,103.27v-52.94S15.47,21.94,15.47,21.94c-2.66,3.01-5.45,7.09-7.3,10.34l22.83,22.78v17.7L2.81,44.66C1.27,50,.38,54.39.11,59.57l43.83,43.7h.01Z"/>
+  <path fill="#fff" d="M394.18,86.28c13.13-3.2,15.95-14.56,15.95-20.9,0-8.65-3.88-16.32-10.27-20.1-5-3.11-11.79-4.32-23.59-4.32h.01s-31.63,0-31.63,0v89.99h37.88c9.43,0,14.98-1.25,19.56-4.22,5.97-3.91,9.43-11.32,9.43-19.68,0-6.61-2.07-11.87-6.25-15.65-2.91-2.7-5.42-3.92-11.1-5.13ZM367.14,57.28h5.26c10.53,0,14.84,2.97,14.84,10.39s-4.3,10.51-14.56,10.51h-5.54v-20.9ZM375.31,115.28h-8.19s.01-21.18.01-21.18h5.12c6.8,0,9.03.26,11.52,1.61,3.33,1.76,5,4.85,5,9.17,0,7.28-4.03,10.39-13.46,10.39Z"/>
+  <path fill="#fff" d="M543.13,40.98h-27.54l-28.32,86.8-19.9-33.67h-.01c13.58-4.22,19.51-14.26,19.51-25.73,0-24.43-22.12-27.4-34.32-27.4h-32.12v89.99h22.49v-37.32l20.26,37.32h45.86l5.47-17.71h28.81l5.47,17.71h23.52l-29.18-89.99ZM449.75,79.98h-6.86v-22.69h6.61c9.53,0,15.38,2.26,15.38,10.93,0,10.5-5.85,11.76-15.13,11.76ZM519.97,95.42l8.94-28.69,8.93,28.69h-17.87Z"/>
+  <polygon fill="#fff" points="277.34 130.96 333.65 130.96 333.65 113.29 299.04 113.29 299.04 94.71 328.38 94.71 328.38 77.05 299.04 77.05 299.04 58.65 333.65 58.65 333.65 40.98 277.34 40.98 277.34 130.96"/>
+  <path fill="#fff" d="M134.6,98.8l-.06,14.22h-12.89c0,11.32,9.19,20.48,20.55,20.48s20.55-9.17,20.55-20.48h0v-.03l-14.25-14.2h-13.89Z"/>
+  <polygon fill="#fff" points="209.89 40.98 200.34 58.65 234.63 58.65 195.89 130.96 255.47 130.96 265.03 113.3 230.74 113.3 269.47 40.98 209.89 40.98"/>
+</svg></div>
+    </span>
+    <div style="width:1px;height:20px;background:rgba(255,255,255,.2);margin:0 4px"></div>
+    <div>
+      <div class="brand-name">RFID Value Accelerator</div>
+      <div class="brand-sub">Zebra Technologies</div>
+    </div>
+  </div>
+  <div style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.3);letter-spacing:.5px;text-transform:uppercase">Zebra Technologies</div>
+</nav>
+
+<div class="shell">
+<aside class="sidebar">
+  <div class="sb-section">Workflow</div>
+  <div class="sb-item active" onclick="go(0)"><div class="sb-num">1</div><span class="sb-label">Engagement Setup</span><span class="sb-short">Setup</span></div>
+  <div class="sb-item" onclick="go(1)"><div class="sb-num">2</div><span class="sb-label">Industry &amp; Value Levers</span><span class="sb-short">Industry</span></div>
+  <div class="sb-item" onclick="go(2)"><div class="sb-num">3</div><span class="sb-label">Discovery Inputs</span><span class="sb-short">Discovery</span></div>
+  <div class="sb-item" onclick="go(3)"><div class="sb-num">4</div><span class="sb-label">Cost Model</span><span class="sb-short">Cost</span></div>
+  <div class="sb-item" onclick="go(4)"><div class="sb-num">5</div><span class="sb-label">ROI & Value Case</span><span class="sb-short">ROI</span></div>
+  <div class="sb-item" onclick="go(5)"><div class="sb-num">6</div><span class="sb-label">Full Analysis</span><span class="sb-short">Analysis</span></div>
+  <div class="sb-divider"></div>
+  <div class="sb-section">Library</div>
+  <div class="sb-item" onclick="go(6)"><div class="sb-num">≡</div><span class="sb-label">Evidence Registry</span><span class="sb-short">Evidence</span></div>
+  <div class="sb-item" onclick="go(7)"><div class="sb-num">?</div><span class="sb-label">Help & Reference</span><span class="sb-short">Help</span></div>
+  <div class="sb-progress">
+    <div class="sb-prog-label">PROGRESS</div>
+    <div class="prog-bar"><div class="prog-fill" id="prog-fill" style="width:11%"></div></div>
+  </div>
+</aside>
+
+<main class="main">
+
+<!-- == STEP 1: ENGAGEMENT SETUP == -->
+<div class="panel active" id="panel-0">
+  <div class="step-eyebrow">Step 1 of 6</div>
+  <div class="step-title">Engagement Setup</div>
+  <div class="step-desc">Capture the key engagement details. This drives the output branding and filters the scenario library. Revenue is collected in Discovery — where it belongs to each scenario.</div>
+
+  <div class="card">
+    <div class="card-title">Organization</div>
+    <div class="g2">
+      <div class="fg">
+        <label class="flabel">Company Name</label>
+        <input class="finput hi" type="text" id="i-company" value="Zebra Technologies" oninput="syncNav()">
+        <div class="fhint">Your company — appears on all outputs</div>
+      </div>
+      <div class="fg">
+        <label class="flabel">Customer Name</label>
+        <input class="finput hi" type="text" id="i-customer" value="Big Red Truck Apparel Company" oninput="syncNav()">
+        <div class="fhint">Prospect or customer — drives output branding</div>
+      </div>
+      <div class="fg">
+        <label class="flabel">Analysis Title</label>
+        <input class="finput" type="text" id="i-title" value="RFID Strategic Value Analysis">
+      </div>
+      <div class="fg">
+        <label class="flabel">Number of Sites / Locations</label>
+        <input class="finput" type="number" id="i-sites" value="50" oninput="syncCostFromProfile()">
+        <div class="fhint">Drives cost model defaults</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Team & Partners</div>
+    <div class="g2">
+      <div class="fg">
+        <label class="flabel">Seller Name</label>
+        <input class="finput" type="text" id="i-seller" value="Joshua Willis">
+      </div>
+      <div class="fg">
+        <label class="flabel">Seller Email</label>
+        <input class="finput" type="email" id="i-email" value="joshua.willis@zebra.com">
+      </div>
+      <div class="fg">
+        <label class="flabel">Parties &amp; Partners</label>
+        <input class="finput" type="text" id="i-partners" placeholder="e.g. Zebra / Stratix Systems / Barcodes Inc." value="Zebra / Stratix Systems">
+      </div>
+      <div class="fg full">
+        <label class="flabel">Key KPIs &amp; Discovery Signal</label>
+        <input class="finput" type="text" id="i-pain" value="Inventory accuracy below 72%; weekly manual counts consuming 480 hrs/month; BOPIS cancellation rate at 9%">
+      </div>
+    </div>
+  </div>
+
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="syncNav();go(1)">Next: Industry & Levers →</button>
+  </div>
+</div>
+
+<!-- == STEP 2: INDUSTRY & FILTERS == -->
+<div class="panel" id="panel-1">
+  <div class="step-eyebrow">Step 2 of 6</div>
+  <div class="step-title">Industry &amp; Value Levers</div>
+  <div class="step-desc">Select one or more industries. All matching value levers appear below &#8212; deselect any that are out of scope before moving on.</div>
+
+  <div class="card">
+    <div class="card-label">Select Industries <span style="font-size:11px;font-weight:400;color:var(--muted);margin-left:6px">Pick all that apply &#8212; levers update instantly</span></div>
+    <div class="vertical-btns" id="vertical-btns">
+      <button class="vbtn active" data-v="retail"         onclick="toggleIndustry(this)">Retail</button>
+      <button class="vbtn"        data-v="warehouse"      onclick="toggleIndustry(this)">Warehouse / 3PL</button>
+      <button class="vbtn"        data-v="manufacturing"  onclick="toggleIndustry(this)">Manufacturing &amp; MRO</button>
+      <button class="vbtn"        data-v="healthcare"     onclick="toggleIndustry(this)">Healthcare</button>
+      <button class="vbtn"        data-v="government"     onclick="toggleIndustry(this)">Government / Federal</button>
+      <button class="vbtn"        data-v="carriers"       onclick="toggleIndustry(this)">Carriers &amp; Logistics</button>
+      <button class="vbtn"        data-v="aviation"       onclick="toggleIndustry(this)">Aviation / MRO</button>
+      <button class="vbtn"        data-v="hospitality"    onclick="toggleIndustry(this)">Hospitality &amp; Venues</button>
+      <button class="vbtn"        data-v="datacenter"     onclick="toggleIndustry(this)">Data Center / IT</button>
+      <button class="vbtn"        data-v="energy"         onclick="toggleIndustry(this)">Energy &amp; Industrial</button>
+      <button class="vbtn"        data-v="foodservice"    onclick="toggleIndustry(this)">Food Service / CPG</button>
+    </div>
+  </div>
+
+  <div class="card" id="lever-card">
+    <div class="card-label" style="display:flex;justify-content:space-between;align-items:center">
+      <span>Value Levers <span id="lever-count-label" style="font-weight:400;color:var(--muted)"></span></span>
+      <span style="display:flex;gap:8px">
+        <button class="btn-link" onclick="setAllLevers(true)">Select all</button>
+        <button class="btn-link" onclick="setAllLevers(false)">Clear all</button>
+      </span>
+    </div>
+    <div id="lever-grid" style="display:flex;flex-direction:column;gap:6px"></div>
+  </div>
+
+  <div id="lever-count-warn" style="display:none;padding:10px 14px;margin-bottom:10px;background:#fdf0f0;border:1px solid rgba(235,87,87,.25);border-left:3px solid #EB5757;font-size:12px;color:#7a1010;line-height:1.55">
+    <strong>⚠ Too many levers selected.</strong> Research on executive decision-making (Miller's Law, CEB/Gartner B2B consensus studies) shows that presenting more than 6 value scenarios in a single conversation reduces buy-in &#8212; stakeholders anchor on complexity rather than value. <strong>Trim to your top 5–6 highest-confidence scenarios</strong> before proceeding to Discovery.
+  </div>
+
+  <div class="alert a-strategy" style="margin-top:4px">
+    <span>⬡</span>
+    <div><strong>Framing Guide</strong> &#8212; Lead with direct labor and hard cost scenarios. Revenue uplift and working capital scenarios carry more variability; position them as upside, not headline. Soft productivity scenarios are best introduced after the hard case is agreed.</div>
+  </div>
+
+  <div class="btn-row">
+    <button class="btn btn-outline" onclick="go(0)">← Back</button>
+    <button class="btn btn-primary" onclick="go(2)">Next: Discovery Inputs →</button>
+  </div>
+</div>
+
+<!-- == STEP 4: DISCOVERY INPUTS == -->
+<div class="panel" id="panel-2">
+  <div class="step-eyebrow">Step 3 of 6</div>
+  <div class="step-title">Discovery Inputs</div>
+  <div class="step-desc">Enter customer-specific values. Defaults are conservative benchmarks &#8212; update any field with real data. Completed scenarios are marked green.</div>
+
+  <div id="disc-accordion"></div>
+
+  <div class="btn-row">
+    <button class="btn btn-outline" onclick="go(1)">← Back</button>
+    <button class="btn btn-primary" onclick="go(3)">Next: Cost Model →</button>
+  </div>
+</div>
+
+<!-- == STEP 5: COST MODEL == -->
+<div class="panel" id="panel-3">
+  <div class="step-eyebrow">Step 4 of 6</div>
+  <div class="step-title">Cost Model</div>
+  <div class="step-desc">Sliders set deployment assumptions &#8212; line items calculate automatically. Override any cell directly, or add BOM line items below.</div>
+
+  <div class="card">
+    <div class="card-title">Deployment Assumptions <span class="badge b-green">SLIDERS AUTO-CALC TABLE BELOW</span></div>
+    <div class="g2">
+      <div class="fg">
+        <label class="flabel">Number of Sites</label>
+        <div class="srow"><input type="range" min="1" max="500" value="50" id="sl-sites" oninput="syncCost()"><div class="sval" id="sv-sites">50</div></div>
+      </div>
+      <div class="fg">
+        <label class="flabel">Tagged Items per Site</label>
+        <div class="srow"><input type="range" min="500" max="100000" step="500" value="15000" id="sl-items" oninput="syncCost()"><div class="sval" id="sv-items">15,000</div></div>
+      </div>
+      <div class="fg">
+        <label class="flabel">Annual Tag Replenishment Rate</label>
+        <div class="srow"><input type="range" min="0.05" max="1" step="0.05" value="0.4" id="sl-replen" oninput="syncCost()"><div class="sval" id="sv-replen">40%</div></div>
+      </div>
+      <div class="fg">
+        <label class="flabel">SaaS / Platform Fee per Site/Year</label>
+        <div class="srow"><input type="range" min="0" max="20000" step="100" value="4800" id="sl-saas" oninput="syncCost()"><div class="sval" id="sv-saas">$4,800</div></div>
+      </div>
+      <div class="fg">
+        <label class="flabel">Unit Tag Cost ($)</label>
+        <div class="srow"><input type="range" min="0.04" max="0.50" step="0.01" value="0.08" id="sl-tag" oninput="syncCost()"><div class="sval" id="sv-tag">$0.08</div></div>
+      </div>
+      <div class="fg">
+        <label class="flabel">Reader Units per Site</label>
+        <div class="srow"><input type="range" min="1" max="20" step="1" value="4" id="sl-readers" oninput="syncCost()"><div class="sval" id="sv-readers">4</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div id="cost-edit-hint" style="display:none;align-items:center;gap:10px;padding:8px 14px;background:#FFF8E1;border:1px solid rgba(242,153,74,.3);border-radius:6px;margin-bottom:8px;font-size:11px;color:#7a4a10">
+    <span>⚠</span>
+    <span>You have manual edits in the cost table. Sliders will only update the auto-calculated rows. <button onclick="costRowsEdited=false;syncCost()" style="margin-left:8px;font-size:10px;padding:2px 8px;border:1px solid #c8830a;border-radius:3px;background:transparent;color:#7a4a10;cursor:pointer;font-family:var(--mono)">↺ Reset &amp; Recalc All</button></span>
+  </div>
+  <div class="card">
+    <div class="card-title">Cost Line Items <span class="badge b-green">EDITABLE &#8212; CLICK ANY VALUE</span></div>
+    <div class="cost-table-wrap">
+    <table class="cost-tbl">
+      <thead><tr><th>Line Item</th><th>Cadence</th><th class="r">Qty</th><th class="r">Unit Cost</th><th class="r">Total</th><th></th></tr></thead>
+      <tbody id="cost-tbody"></tbody>
+      <tfoot id="cost-tfoot"></tfoot>
+    </table>
+    </div>
+    <div class="add-row-btn" onclick="addCostRow()">+ Add line item</div>
+  </div>
+
+  <div class="alert a-info" style="margin-top:0">
+    <span>ℹ</span>
+    <span>Cadence auto-fills the Total: one-time → Yr 0, annual → every year, monthly → ×12/yr. Qty × Unit Cost = Total. All values flow live into ROI.</span>
+  </div>
+
+  <div class="btn-row">
+    <button class="btn btn-outline" onclick="go(2)">← Back</button>
+    <button class="btn btn-primary" onclick="go(4)">View ROI & Value Case →</button>
+    <button class="btn btn-outline" onclick="resetCost()" style="font-size:11px">↺ Reset to Example</button>
+  </div>
+</div>
+
+<!-- == STEP 6: ROI & VALUE CASE == -->
+<div class="panel" id="panel-4">
+  <div class="step-eyebrow">Step 5 of 6</div>
+  <div class="step-title">ROI & Value Case</div>
+  <div class="step-desc">Full financial model with type-driven benefit realization ramps. Hard Labor &amp; Cost: 50&#8594;85&#8594;100%. Revenue: 30&#8594;70&#8594;100%. Soft Productivity: 25&#8594;65&#8594;100%. Working Capital: 20&#8594;60&#8594;100%. Strategic: 0&#8594;20&#8594;60%. Each ramp reflects operational change velocity, not technical risk.</div>
+
+  <div class="alert a-strategy" style="margin-bottom:18px">
+    <span>⬡</span>
+    <div><strong>Framing Guide</strong> &#8212; Lead the conversation with Hard Labor and Hard Cost scenarios &#8212; they require no demand-side assumptions and finance teams credit them at 100%. Revenue uplift and working capital are real but variable; position them as upside that builds the strategic case, not the anchor. Soft productivity follows only after the hard case is agreed.</div>
+  </div>
+
+  <div class="kpi-grid" id="kpi-grid"></div>
+  <div class="kpi-secondary-row" id="kpi-secondary"></div>
+
+  <!-- Delay + Missed Value side by side -->
+  <div class="delay-section">
+    <div class="delay-card">
+      <div class="card-title">Cost of Delay</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:10px">Slide to see how delay compounds foregone value</div>
+      <div class="delay-slider-wrap">
+        <div class="srow">
+          <input type="range" min="1" max="24" step="1" value="6" id="sl-delay" oninput="syncDelay()">
+          <div class="sval" id="sv-delay">6 mo</div>
+        </div>
+      </div>
+      <div id="delay-output" style="margin-top:14px"></div>
+    </div>
+    <div class="delay-card">
+      <div class="card-title">Cost of Doing Nothing</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:8px">Value leaking per scenario &#8212; slider shows cumulative loss at that delay milestone</div>
+      <div id="missed-items"></div>
+    </div>
+  </div>
+
+  <!-- Benefit bars -->
+  <div class="card">
+    <div class="card-title">Annual Benefit by Scenario</div>
+    <div id="benefit-bars"></div>
+  </div>
+
+  <!-- Cashflow line chart -->
+  <div class="card">
+    <div class="card-title">Cumulative Net Cash Position <span style="font-family:var(--mono);font-size:10px;color:var(--muted);font-weight:400;margin-left:8px">5-YEAR VIEW · PAYBACK SHOWN</span></div>
+    <div id="cf-chart"></div>
+  </div>
+  <!-- Ramp chart: Benefits vs Costs -->
+  <div class="card">
+    <div class="card-title">Benefit Ramp vs. Investment Cost <span style="font-family:var(--mono);font-size:10px;color:var(--muted);font-weight:400;margin-left:8px">CUMULATIVE · 5-YEAR</span></div>
+    <div id="ramp-chart"></div>
+  </div>
+  <!-- Financial model -->
+  <div class="fin-grid" id="fin-grid"></div>
+
+  <!-- Detail table -->
+  <div class="card card-table">
+    <div class="card-title" style="padding:16px 16px 0">Value by Scenario &#8212; Full Detail</div>
+    <div class="vtbl-wrap">
+    <table class="vtbl">
+      <thead><tr><th>Scenario</th><th class="r">Full Annual</th><th class="r">Yr 1</th><th class="r">Yr 2</th><th class="r">Yr 3+</th><th>Type</th></tr></thead>
+      <tbody id="vtbl-body"></tbody>
+      <tfoot id="vtbl-foot"></tfoot>
+    </table>
+    </div>
+  </div>
+
+  <div class="btn-row">
+    <button class="btn btn-outline" onclick="go(3)">← Back</button>
+    <button class="btn btn-success" onclick="go(5)">Build Customer Output →</button>
+  </div>
+</div>
+
+<!-- == STEP 7: FULL ANALYSIS == -->
+<div class="panel" id="panel-5">
+  <div class="step-eyebrow">Step 6 of 6</div>
+  <div class="step-title">Full Analysis</div>
+  <div class="step-desc">Customer-facing executive output. <strong>Export Full Appraisal</strong> generates a 20+ page investment appraisal PDF with NPV, IRR, DCF tables, payback chart and evidence. <strong>Export Deck</strong> produces the branded 13-slide PPTX.</div>
+
+  <div class="exec-hero">
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:16px;flex-wrap:wrap;gap:12px">
+      <div>
+        <div style="font-family:var(--mono);font-size:9px;color:rgba(255,255,255,.35);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px">VALUE CASE</div>
+        <div id="exec-logo-slot" style="margin-bottom:10px"><!-- logo loads here --></div>
+        <h2 id="exec-heading">RFID Value Case</h2>
+        <p id="exec-sub" style="color:rgba(255,255,255,.45);font-size:11px;margin-top:4px"></p>
+      </div>
+      <div style="font-family:var(--mono);font-size:10px;color:rgba(255,255,255,.3);text-align:right">
+        <div id="exec-date-display"></div>
+        <div>Zebra Technologies</div>
+      </div>
+    </div>
+    <div class="exec-kpis" id="exec-kpis"></div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Value Narrative</div>
+    <div class="narrative" id="exec-narrative"></div>
+  </div>
+  <div class="card" style="border-left:4px solid var(--brand-black);padding:16px 20px;margin-bottom:16px;">
+    <div class="card-title" style="margin-bottom:10px">Benefit Realization Methodology</div>
+    <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px" id="ramp-methodology-grid"></div>
+    <div style="font-size:11px;color:var(--muted);margin-top:10px;line-height:1.55">Adoption curves are calibrated to operational change velocity, consistent with GS1 US deployment guidance and Auburn University RFID Lab benchmark data. Hard-dollar scenarios carry 50% Year 1 realization to account for process change lag &#8212; not technical risk. Revenue and working capital scenarios ramp slower to reflect demand-side variability.</div>
+  </div>
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-title">Benefit Realization vs. Investment <span style="font-family:var(--mono);font-size:10px;color:var(--muted);font-weight:400;margin-left:8px">CUMULATIVE · 5-YEAR</span></div>
+    <div id="exec-ramp-chart"></div>
+  </div>
+
+  <div class="card card-table">
+    <div class="card-title" style="padding:16px 16px 0">Active Scenarios &amp; Evidence <span style="font-family:var(--mono);font-size:10px;font-weight:400;color:var(--muted);margin-left:8px">YR 1 REFLECTS ADOPTION RAMP</span></div>
+    <div class="vtbl-wrap">
+    <table class="vtbl" id="exec-sc-table">
+      <thead><tr><th>Scenario</th><th>Value Theme</th><th>Benefit Type</th><th class="r">Yr 1 Ramped</th><th class="r">Annual Value</th><th>Evidence</th></tr></thead>
+      <tbody id="exec-sc-body"></tbody>
+    </table>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="card-title">Evidence Summary</div>
+    <div id="exec-evidence"></div>
+  </div>
+
+  <div class="disclaimer">
+  <strong>Scope:</strong> Only quantified direct benefits from the selected scenarios are included in this analysis. Strategic, soft, and indirect benefits are discussed separately and are not reflected in the financial totals.<br><br><strong>Modeling Disclaimer:</strong> Financial estimates are illustrative projections generated from benchmark data and the parameters you provided. Actual results depend on deployment scope, operational execution, system integration, and market conditions specific to your environment. Zebra Technologies makes no guarantee of specific outcomes. This model is intended to support internal business case development and pre-sale discovery &#8212; it is indicative and not a contractual commitment.
+</div>
+  <!-- Export actions -->
+  <div style="margin-top:24px;display:flex;flex-direction:column;gap:10px;">
+    <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+      <button class="btn btn-outline" onclick="go(4)">
+        <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M9 1L3 7L9 13" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Back
+      </button>
+      <button class="btn btn-primary" onclick="exportFullPDF()">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><rect x="2" y="1" width="9" height="13" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 5h5M5 7.5h5M5 10h3" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/><path d="M9 1v3.5H13" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Full Appraisal PDF
+      </button>
+      <button class="btn btn-success" onclick="runPPTXDownload(this)">
+        <svg width="15" height="15" viewBox="0 0 15 15" fill="none"><rect x="1.5" y="2" width="12" height="9" rx="1.5" stroke="currentColor" stroke-width="1.5"/><path d="M5 13.5h5M7.5 11v2.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><path d="M4.5 8L6.5 5.5L8.5 7.5L10.5 5" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        Export Deck (PPTX)
+      </button>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;">
+      <button class="btn btn-outline" onclick="exportJSON()" style="height:34px;padding:0 16px;font-size:12.5px;border-radius:17px;">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><path d="M6.5 1v8M3 6.5l3.5 3.5L10 6.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/><path d="M1.5 11.5h10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        Export JSON
+      </button>
+      <button class="btn btn-outline" onclick="exportLLMPrompt()" style="height:34px;padding:0 16px;font-size:12.5px;border-radius:17px;">
+        <svg width="13" height="13" viewBox="0 0 13 13" fill="none"><rect x="1" y="2" width="11" height="8" rx="1.5" stroke="currentColor" stroke-width="1.4"/><path d="M3.5 5h6M3.5 7.5h4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round"/></svg>
+        Copy AI Prompt
+      </button>
+    </div>
+  </div>
+  <!-- Output guide -->
+  <div id="print-hint" style="margin-top:16px;display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+    <div style="padding:12px 16px;background:#f7f8fa;border:1px solid #e2e6ea;border-radius:8px;border-left:3px solid #1a1a2e;">
+      <div style="font-size:11px;font-weight:700;color:#1a1a2e;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px;">📄 Full Appraisal PDF</div>
+      <div style="font-size:11px;color:#555;line-height:1.55;">Opens a print-ready investment appraisal — cover, NPV &amp; IRR summary, DCF payback chart, per-scenario breakdown with evidence, and basis of preparation. In the popup: <strong>File → Save as PDF</strong>.</div>
+    </div>
+    <div style="padding:12px 16px;background:#f7f8fa;border:1px solid #e2e6ea;border-radius:8px;border-left:3px solid #A8F931;">
+      <div style="font-size:11px;font-weight:700;color:#1a1a2e;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px;">📊 Deck (PPTX)</div>
+      <div style="font-size:11px;color:#555;line-height:1.55;">Downloads a branded PowerPoint deck — cover through closing, one slide per scenario, cash story, cost of delay, and appendix. Drop your logo into the placeholder on each slide to complete it.</div>
+    </div>
+    <div style="padding:12px 16px;background:#f7f8fa;border:1px solid #e2e6ea;border-radius:8px;border-left:3px solid #94a3b8;">
+      <div style="font-size:11px;font-weight:700;color:#1a1a2e;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px;">⬇ Export JSON</div>
+      <div style="font-size:11px;color:#555;line-height:1.55;">Saves the full engagement payload as a <code style="font-size:10px;background:#eee;padding:1px 4px;border-radius:3px;">.json</code> file. Use with <code style="font-size:10px;background:#eee;padding:1px 4px;border-radius:3px;">generate_pdf.py</code> to produce the server-side PDF, or archive the case for later.</div>
+    </div>
+    <div style="padding:12px 16px;background:#f7f8fa;border:1px solid #e2e6ea;border-radius:8px;border-left:3px solid #94a3b8;">
+      <div style="font-size:11px;font-weight:700;color:#1a1a2e;margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px;">🤖 Copy AI Prompt</div>
+      <div style="font-size:11px;color:#555;line-height:1.55;">Copies the full engagement brief — scenarios, financials, pain signals, evidence — ready to paste into Claude or ChatGPT. Ask it to write an exec summary, prep objection handling, or draft the value story.</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- == REFERENCE: EVIDENCE REGISTRY == -->
+<div class="panel" id="panel-6">
+  <div class="step-eyebrow">Reference Library</div>
+  <div class="step-title">Evidence Registry</div>
+  <div class="step-desc">All sources backing scenario quantification. Tier 1 = academic/government. Tier 2 = industry benchmark. Tier 3 = practitioner/operator data.</div>
+  <div id="ev-list"></div>
+</div>
+
+<!-- == HELP & REFERENCE == -->
+<div class="panel" id="panel-7">
+  <div class="step-eyebrow">Reference</div>
+  <div class="step-title">Help &amp; Reference</div>
+  <div class="step-desc">How the tool works, what every label means, and how to run a great value conversation.</div>
+
+  <!-- ── TOC ────────────────────────────────────────────── -->
+  <div class="card" style="margin-bottom:20px">
+    <div class="card-title">On This Page</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px 20px;font-size:12px">
+      <a href="#h-workflow"   onclick="document.getElementById('h-workflow').scrollIntoView({behavior:'smooth'});return false;"   style="color:var(--brand-black);text-decoration:none">→ The 6-Step Workflow</a>
+      <a href="#h-levers"     onclick="document.getElementById('h-levers').scrollIntoView({behavior:'smooth'});return false;"     style="color:var(--brand-black);text-decoration:none">→ Industry &amp; Value Levers</a>
+      <a href="#h-inputs"     onclick="document.getElementById('h-inputs').scrollIntoView({behavior:'smooth'});return false;"     style="color:var(--brand-black);text-decoration:none">→ Discovery Inputs</a>
+      <a href="#h-cost"       onclick="document.getElementById('h-cost').scrollIntoView({behavior:'smooth'});return false;"       style="color:var(--brand-black);text-decoration:none">→ Cost Model</a>
+      <a href="#h-ramptypes"  onclick="document.getElementById('h-ramptypes').scrollIntoView({behavior:'smooth'});return false;"  style="color:var(--brand-black);text-decoration:none">→ Benefit Types &amp; Ramps</a>
+      <a href="#h-roi"        onclick="document.getElementById('h-roi').scrollIntoView({behavior:'smooth'});return false;"        style="color:var(--brand-black);text-decoration:none">→ ROI &amp; Value Case</a>
+      <a href="#h-exports"    onclick="document.getElementById('h-exports').scrollIntoView({behavior:'smooth'});return false;"    style="color:var(--brand-black);text-decoration:none">→ Exports &amp; Outputs</a>
+      <a href="#h-evidence"   onclick="document.getElementById('h-evidence').scrollIntoView({behavior:'smooth'});return false;"   style="color:var(--brand-black);text-decoration:none">→ Evidence Tiers</a>
+      <a href="#h-badges"     onclick="document.getElementById('h-badges').scrollIntoView({behavior:'smooth'});return false;"     style="color:var(--brand-black);text-decoration:none">→ Badges &amp; Labels Decoded</a>
+      <a href="#h-tips"       onclick="document.getElementById('h-tips').scrollIntoView({behavior:'smooth'});return false;"       style="color:var(--brand-black);text-decoration:none">→ Field Tips</a>
+    </div>
+  </div>
+
+  <!-- ── WORKFLOW ─────────────────────────────────────────── -->
+  <div id="h-workflow" style="font-family:var(--head);font-size:18px;font-weight:700;color:var(--brand-black);margin:28px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--brand-black)">The 6-Step Workflow</div>
+  <div style="font-size:13px;color:var(--gray-700);margin-bottom:16px;line-height:1.6">Navigation is linear by default — each step feeds the next. You can jump to any step from the sidebar at any time. The progress bar reflects your position in the workflow. Completed steps are marked with a check.</div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px;margin-bottom:20px">
+    <div style="border:1px solid var(--gray-200);border-radius:8px;overflow:hidden">
+      <div style="background:var(--brand-black);color:var(--brand-green);font-family:var(--mono);font-size:10px;font-weight:700;padding:6px 12px;letter-spacing:1px">STEP 1 — ENGAGEMENT SETUP</div>
+      <div style="padding:10px 12px;font-size:12px;color:var(--gray-700);line-height:1.55">Capture company name, revenue, number of sites, seller info, and the discovery signal. The <strong>Key KPIs &amp; Discovery Signal</strong> field is the most important — use the customer's own words. It appears verbatim on the PDF cover and drives the value narrative.</div>
+    </div>
+    <div style="border:1px solid var(--gray-200);border-radius:8px;overflow:hidden">
+      <div style="background:var(--brand-black);color:var(--brand-green);font-family:var(--mono);font-size:10px;font-weight:700;padding:6px 12px;letter-spacing:1px">STEP 2 — INDUSTRY &amp; VALUE LEVERS</div>
+      <div style="padding:10px 12px;font-size:12px;color:var(--gray-700);line-height:1.55">Select one or more industries. All matching scenarios appear — deselect anything out of scope. Keep to <strong>5–6 scenarios max</strong> for the sharpest conversation. Research shows more than 6 levers in a single meeting reduces buy-in.</div>
+    </div>
+    <div style="border:1px solid var(--gray-200);border-radius:8px;overflow:hidden">
+      <div style="background:var(--brand-black);color:var(--brand-green);font-family:var(--mono);font-size:10px;font-weight:700;padding:6px 12px;letter-spacing:1px">STEP 3 — DISCOVERY INPUTS</div>
+      <div style="padding:10px 12px;font-size:12px;color:var(--gray-700);line-height:1.55">Enter customer-specific values. Defaults are conservative benchmarks — replace as many as possible with real customer data. Every field shows a source hint (e.g. "GS1: 2–5 min"). Green indicators show which scenarios are fully populated.</div>
+    </div>
+    <div style="border:1px solid var(--gray-200);border-radius:8px;overflow:hidden">
+      <div style="background:var(--brand-black);color:var(--brand-green);font-family:var(--mono);font-size:10px;font-weight:700;padding:6px 12px;letter-spacing:1px">STEP 4 — COST MODEL</div>
+      <div style="padding:10px 12px;font-size:12px;color:var(--gray-700);line-height:1.55">Sliders set deployment assumptions — the line item table auto-builds below. Every cell is editable. Add custom BOM rows with <strong>+ Add line item</strong>. The footer shows NRC, recurring, and 3-year TCO separately.</div>
+    </div>
+    <div style="border:1px solid var(--gray-200);border-radius:8px;overflow:hidden">
+      <div style="background:var(--brand-black);color:var(--brand-green);font-family:var(--mono);font-size:10px;font-weight:700;padding:6px 12px;letter-spacing:1px">STEP 5 — ROI &amp; VALUE CASE</div>
+      <div style="padding:10px 12px;font-size:12px;color:var(--gray-700);line-height:1.55">Full financial model: 5-year NPV, IRR, payback chart, benefit ramp vs. cost curves, and the cost-of-delay slider. The per-scenario table shows Yr 1 ramped values — not full annual — reflecting the adoption ramp.</div>
+    </div>
+    <div style="border:1px solid var(--gray-200);border-radius:8px;overflow:hidden">
+      <div style="background:var(--brand-black);color:var(--brand-green);font-family:var(--mono);font-size:10px;font-weight:700;padding:6px 12px;letter-spacing:1px">STEP 6 — FULL ANALYSIS</div>
+      <div style="padding:10px 12px;font-size:12px;color:var(--gray-700);line-height:1.55">Customer-facing output. Export the 20+ page investment appraisal PDF, the 13-slide PPTX deck, or the one-page executive summary. JSON export saves state for handoffs.</div>
+    </div>
+  </div>
+
+  <!-- ── LEVERS ─────────────────────────────────────────────── -->
+  <div id="h-levers" style="font-family:var(--head);font-size:18px;font-weight:700;color:var(--brand-black);margin:28px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--brand-black)">Industry &amp; Value Levers</div>
+  <div style="font-size:13px;color:var(--gray-700);margin-bottom:14px;line-height:1.6">83 scenarios across 11 verticals. Multi-select is supported — a manufacturer with a DC can select both Manufacturing and Warehouse. Selecting a new vertical auto-activates its scenarios and updates the cost model slider defaults.</div>
+
+  <div class="alert a-strategy" style="margin-bottom:14px">
+    <span>⬡</span>
+    <div><strong>Framing Guide</strong> — Lead with Hard Labor and Hard Cost scenarios — they require no demand-side assumptions and finance credits them at 100%. Revenue and working capital are real but variable: position as upside. Soft productivity follows after the hard case is agreed.</div>
+  </div>
+
+  <div style="font-size:12px;color:var(--gray-700);line-height:1.7;margin-bottom:6px">Verticals and their primary value themes:</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:6px;margin-bottom:20px;font-size:12px">
+    <div style="padding:7px 10px;background:var(--gray-50);border-radius:5px;border:1px solid var(--gray-100)"><strong>Retail (9)</strong> — Labor, OSA, shrink, markdown, omnichannel, working capital</div>
+    <div style="padding:7px 10px;background:var(--gray-50);border-radius:5px;border:1px solid var(--gray-100)"><strong>Warehouse / 3PL (7)</strong> — Cycle count, receiving throughput, pick accuracy, SLA</div>
+    <div style="padding:7px 10px;background:var(--gray-50);border-radius:5px;border:1px solid var(--gray-100)"><strong>Manufacturing &amp; MRO (8)</strong> — Tool loss, WIP, compliance, recall, chargebacks</div>
+    <div style="padding:7px 10px;background:var(--gray-50);border-radius:5px;border:1px solid var(--gray-100)"><strong>Healthcare (8)</strong> — Asset rental, surgical instruments, patient flow, medication</div>
+    <div style="padding:7px 10px;background:var(--gray-50);border-radius:5px;border:1px solid var(--gray-100)"><strong>Government / Federal (6)</strong> — Audit compliance, ghost assets, sensitive item tracking</div>
+    <div style="padding:7px 10px;background:var(--gray-50);border-radius:5px;border:1px solid var(--gray-100)"><strong>Carriers &amp; Logistics (11)</strong> — Trailer utilization, OS&amp;D, sortation, detention</div>
+    <div style="padding:7px 10px;background:var(--gray-50);border-radius:5px;border:1px solid var(--gray-100)"><strong>Aviation / MRO (6)</strong> — Baggage mishandling, tool control, FOD risk, traceability</div>
+    <div style="padding:7px 10px;background:var(--gray-50);border-radius:5px;border:1px solid var(--gray-100)"><strong>Hospitality &amp; Venues (6)</strong> — Linen loss, F&amp;B, wristband revenue, access control</div>
+    <div style="padding:7px 10px;background:var(--gray-50);border-radius:5px;border:1px solid var(--gray-100)"><strong>Data Center / IT (7)</strong> — CMDB accuracy, stranded assets, compliance audit, MTTR</div>
+    <div style="padding:7px 10px;background:var(--gray-50);border-radius:5px;border:1px solid var(--gray-100)"><strong>Energy &amp; Industrial (7)</strong> — Field materials, PPE compliance, MRO carrying cost</div>
+    <div style="padding:7px 10px;background:var(--gray-50);border-radius:5px;border:1px solid var(--gray-100)"><strong>Food Service / CPG (8)</strong> — FEFO waste, recall traceability, cold chain, ESG</div>
+  </div>
+
+  <!-- ── DISCOVERY INPUTS ─────────────────────────────────── -->
+  <div id="h-inputs" style="font-family:var(--head);font-size:18px;font-weight:700;color:var(--brand-black);margin:28px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--brand-black)">Discovery Inputs</div>
+  <div style="font-size:13px;color:var(--gray-700);margin-bottom:14px;line-height:1.6">Each selected scenario has a set of input fields that drive its formula. Replace defaults with real customer data wherever possible — a model built on real numbers is materially more defensible than one built on benchmarks.</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px">
+    <div style="background:var(--gray-50);border-radius:6px;padding:10px 12px;font-size:12px;border:1px solid var(--gray-100)">
+      <div style="font-family:var(--mono);font-size:10px;font-weight:700;color:var(--muted);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px">Benchmark Hints</div>
+      Every field shows a grey hint below it — the source range and the default used. The default is always the conservative end of the range.
+    </div>
+    <div style="background:var(--gray-50);border-radius:6px;padding:10px 12px;font-size:12px;border:1px solid var(--gray-100)">
+      <div style="font-family:var(--mono);font-size:10px;font-weight:700;color:var(--muted);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px">Loaded Labor Rate</div>
+      Always use fully-loaded rate (wage + benefits + overhead) — typically 1.3–1.5× base wage. This is the number finance will verify, so use theirs if you have it.
+    </div>
+    <div style="background:var(--gray-50);border-radius:6px;padding:10px 12px;font-size:12px;border:1px solid var(--gray-100)">
+      <div style="font-family:var(--mono);font-size:10px;font-weight:700;color:var(--muted);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px">Annual Revenue</div>
+      Use revenue attributable to the sites in scope — not total group revenue. A 200-store deployment should use those stores' combined revenue, not the parent company's.
+    </div>
+    <div style="background:var(--gray-50);border-radius:6px;padding:10px 12px;font-size:12px;border:1px solid var(--gray-100)">
+      <div style="font-family:var(--mono);font-size:10px;font-weight:700;color:var(--muted);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px">Objection Handlers</div>
+      Each scenario includes a pre-written <strong>Challenge</strong> — a specific rebuttal tied to the formula logic and evidence. Use it when a customer pushes back on a specific number.
+    </div>
+  </div>
+
+  <!-- ── COST MODEL ────────────────────────────────────────── -->
+  <div id="h-cost" style="font-family:var(--head);font-size:18px;font-weight:700;color:var(--brand-black);margin:28px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--brand-black)">Cost Model</div>
+  <div style="font-size:13px;color:var(--gray-700);margin-bottom:16px;line-height:1.7">
+    The cost model has two layers that work together. The <strong>top layer</strong> is a set of sliders — store count, readers per store, tags per item, labor rate, and a few others — that drive an automatic Bill of Materials estimate. This gives you a defensible baseline in under a minute without needing a formal quote. The numbers are derived from Zebra deployment benchmarks and update instantly as you adjust.
+    <br><br>
+    The <strong>bottom layer</strong> is a fully editable line-item table. Every auto-calculated row can be overridden — just click a cell and type. You can also add custom line items for anything the sliders don't cover (integration fees, customer-specific services, partner margins, etc.). Once you manually edit a row, it gets locked from slider updates so your changes are preserved.
+    <br><br>
+    For early-stage conversations, the slider defaults are usually enough to get to a credible payback number. For a CFO or procurement audience, replace the key rows with actual quote figures before exporting.
+  </div>
+
+  <div style="margin-bottom:14px">
+    <div style="font-family:var(--mono);font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;margin-bottom:8px">Cadence Options — How Costs Flow Through the Model</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:6px;font-size:12px">
+      <div style="padding:7px 10px;background:var(--gray-50);border-radius:5px;border:1px solid var(--gray-100)"><strong>One-Time</strong> — Allocated to Year 0. Hardware, installation, services, training.</div>
+      <div style="padding:7px 10px;background:var(--gray-50);border-radius:5px;border:1px solid var(--gray-100)"><strong>Annual</strong> — Repeats Year 1+. SaaS licenses, support, annual replenishment.</div>
+      <div style="padding:7px 10px;background:var(--gray-50);border-radius:5px;border:1px solid var(--gray-100)"><strong>Monthly</strong> — Entered as monthly fee, annualised ×12, allocated Year 1+.</div>
+      <div style="padding:7px 10px;background:var(--gray-50);border-radius:5px;border:1px solid var(--gray-100)"><strong>Per-Site/Year</strong> — Rate × qty (sites), allocated Year 1+. Useful for per-location contracts.</div>
+      <div style="padding:7px 10px;background:var(--gray-50);border-radius:5px;border:1px solid var(--gray-100)"><strong>Other</strong> — Treated as one-time (Year 0). Use for custom one-off costs.</div>
+    </div>
+  </div>
+
+  <div class="alert a-info" style="margin-bottom:14px">
+    <span>ℹ</span>
+    <span><strong>Manual Edit Flag</strong> — Once you edit a row or add a line item, an amber banner appears. Sliders will still update auto-calculated rows but won't overwrite your custom values. Use <strong>↺ Reset &amp; Recalc All</strong> in the banner to restore full slider control, or <strong>↺ Reset to Example</strong> at the bottom of the page to reset everything including sliders.</span>
+  </div>
+
+  <div style="font-size:12px;color:var(--gray-700);line-height:1.6;margin-bottom:6px">The footer shows three totals — read them separately:</div>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px;font-size:12px">
+    <div style="padding:9px 11px;background:var(--gray-50);border-radius:5px;border-top:2px solid var(--brand-black)"><strong>Non-Recurring (Yr 0)</strong><br>One-time capital: hardware, tags, services, training + 7% contingency</div>
+    <div style="padding:9px 11px;background:var(--gray-50);border-radius:5px;border-top:2px solid var(--brand-black)"><strong>Recurring (Yr 1+)</strong><br>Annual operating cost from Year 1 forward: SaaS, replenishment, support</div>
+    <div style="padding:9px 11px;background:var(--gray-50);border-radius:5px;border-top:2px solid var(--brand-black)"><strong>3-Year Total</strong><br>Yr 0 + Yr 1 + (Yr 1 × 2). The TCO number finance uses for capital comparison</div>
+  </div>
+
+  <!-- ── BENEFIT TYPES & RAMPS ──────────────────────────────── -->
+  <div id="h-ramptypes" style="font-family:var(--head);font-size:18px;font-weight:700;color:var(--brand-black);margin:28px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--brand-black)">Benefit Types &amp; Ramps</div>
+  <div style="font-size:13px;color:var(--gray-700);margin-bottom:14px;line-height:1.6">Every scenario is classified into one of five benefit types. The type drives the badge colour, the ramp rate in the financial model, and how you frame it in the customer conversation. Ramps reflect <em>operational change velocity</em> — not technical risk. RFID works on day one; what takes time is process change.</div>
+
+  <div style="display:grid;gap:6px;margin-bottom:20px">
+    <div style="display:grid;grid-template-columns:140px 80px 80px 80px 1fr;gap:0;border-radius:6px;overflow:hidden;border:1px solid var(--gray-200);font-size:12px">
+      <div style="background:var(--brand-black);color:#fff;padding:7px 10px;font-family:var(--mono);font-size:10px;font-weight:700">TYPE</div>
+      <div style="background:var(--brand-black);color:#fff;padding:7px 10px;font-family:var(--mono);font-size:10px;font-weight:700;text-align:center">YR 1</div>
+      <div style="background:var(--brand-black);color:#fff;padding:7px 10px;font-family:var(--mono);font-size:10px;font-weight:700;text-align:center">YR 2</div>
+      <div style="background:var(--brand-black);color:#fff;padding:7px 10px;font-family:var(--mono);font-size:10px;font-weight:700;text-align:center">YR 3+</div>
+      <div style="background:var(--brand-black);color:#fff;padding:7px 10px;font-family:var(--mono);font-size:10px;font-weight:700">FRAMING &amp; CREDIBILITY</div>
+    </div>
+    <div style="display:grid;grid-template-columns:140px 80px 80px 80px 1fr;gap:0;border-radius:6px;overflow:hidden;border:1px solid var(--gray-200);font-size:12px">
+      <div style="background:#E2FFB6;padding:8px 10px;font-weight:700;display:flex;align-items:center">Hard Labor</div>
+      <div style="background:#F0FFD8;padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center">50%</div>
+      <div style="background:#F0FFD8;padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center">85%</div>
+      <div style="background:#F0FFD8;padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center">100%</div>
+      <div style="background:#F0FFD8;padding:8px 10px;display:flex;align-items:center;color:var(--gray-700)">Direct measurable hours × rate. Finance credits at 100%. Lead with these.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:140px 80px 80px 80px 1fr;gap:0;border-radius:6px;overflow:hidden;border:1px solid var(--gray-200);font-size:12px">
+      <div style="background:#E6E6E6;padding:8px 10px;font-weight:700;display:flex;align-items:center">Hard Cost</div>
+      <div style="background:#F2F2F2;padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center">50%</div>
+      <div style="background:#F2F2F2;padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center">85%</div>
+      <div style="background:#F2F2F2;padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center">100%</div>
+      <div style="background:#F2F2F2;padding:8px 10px;display:flex;align-items:center;color:var(--gray-700)">Direct P&amp;L spend reduction — rental, chargebacks, shrink, fines. Verifiable from accounts. Finance credits at 100%.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:140px 80px 80px 80px 1fr;gap:0;border-radius:6px;overflow:hidden;border:1px solid var(--gray-200);font-size:12px">
+      <div style="background:rgba(242,153,74,.18);padding:8px 10px;font-weight:700;display:flex;align-items:center;color:#7a3e00">Revenue</div>
+      <div style="background:rgba(242,153,74,.09);padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center;color:#7a3e00">30%</div>
+      <div style="background:rgba(242,153,74,.09);padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center;color:#7a3e00">70%</div>
+      <div style="background:rgba(242,153,74,.09);padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center;color:#7a3e00">100%</div>
+      <div style="background:rgba(242,153,74,.09);padding:8px 10px;display:flex;align-items:center;color:#7a3e00">Top-line and margin recovery. Demand-side variability — position as upside, not the anchor.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:140px 80px 80px 80px 1fr;gap:0;border-radius:6px;overflow:hidden;border:1px solid var(--gray-200);font-size:12px">
+      <div style="background:#F2F2F2;padding:8px 10px;font-weight:700;display:flex;align-items:center;color:#565656">Soft Prod.</div>
+      <div style="background:#F8F8F8;padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center;color:#565656">25%</div>
+      <div style="background:#F8F8F8;padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center;color:#565656">65%</div>
+      <div style="background:#F8F8F8;padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center;color:#565656">100%</div>
+      <div style="background:#F8F8F8;padding:8px 10px;display:flex;align-items:center;color:#565656">Hours redirected, not eliminated. Real but not automatically cashable. Introduce after hard case is agreed.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:140px 80px 80px 80px 1fr;gap:0;border-radius:6px;overflow:hidden;border:1px solid var(--gray-200);font-size:12px">
+      <div style="background:rgba(0,100,180,.1);padding:8px 10px;font-weight:700;display:flex;align-items:center;color:#00497A">Working Cap.</div>
+      <div style="background:rgba(0,100,180,.05);padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center;color:#00497A">20%</div>
+      <div style="background:rgba(0,100,180,.05);padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center;color:#00497A">60%</div>
+      <div style="background:rgba(0,100,180,.05);padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center;color:#00497A">100%</div>
+      <div style="background:rgba(0,100,180,.05);padding:8px 10px;display:flex;align-items:center;color:#00497A">Inventory reduction → carrying cost savings. Balance sheet release. Requires finance sign-off and system recalibration.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:140px 80px 80px 80px 1fr;gap:0;border-radius:6px;overflow:hidden;border:1px solid var(--gray-200);font-size:12px">
+      <div style="background:#F2F2F2;padding:8px 10px;font-weight:700;display:flex;align-items:center;color:#757575">Strategic</div>
+      <div style="background:#F8F8F8;padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center;color:#757575">0%</div>
+      <div style="background:#F8F8F8;padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center;color:#757575">20%</div>
+      <div style="background:#F8F8F8;padding:8px 10px;text-align:center;font-family:var(--mono);font-weight:700;display:flex;align-items:center;justify-content:center;color:#757575">60%</div>
+      <div style="background:#F8F8F8;padding:8px 10px;display:flex;align-items:center;color:#757575">Data foundation, AI enablement, audit readiness. Qualifying scenario — directional value, not anchor. Max 60% realisation by Year 3.</div>
+    </div>
+  </div>
+
+  <!-- ── ROI & VALUE CASE ───────────────────────────────────── -->
+  <div id="h-roi" style="font-family:var(--head);font-size:18px;font-weight:700;color:var(--brand-black);margin:28px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--brand-black)">ROI &amp; Value Case — Key Metrics</div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:8px;margin-bottom:16px;font-size:12px">
+    <div style="padding:10px 12px;background:var(--gray-50);border-radius:6px;border:1px solid var(--gray-100)">
+      <div style="font-family:var(--mono);font-size:10px;font-weight:700;color:var(--muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">Annual Value (Yr 3+)</div>
+      Fully-ramped run-rate benefit at steady state. Sum of all selected scenarios at 100% ramp. The number to quote when asked "what is this worth?"
+    </div>
+    <div style="padding:10px 12px;background:var(--gray-50);border-radius:6px;border:1px solid var(--gray-100)">
+      <div style="font-family:var(--mono);font-size:10px;font-weight:700;color:var(--muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">Payback Period</div>
+      Month in which cumulative net cash crosses zero. Shown on the cash position chart as a dashed line. If beyond 60 months, displayed as &gt;60 mo.
+    </div>
+    <div style="padding:10px 12px;background:var(--gray-50);border-radius:6px;border:1px solid var(--gray-100)">
+      <div style="font-family:var(--mono);font-size:10px;font-weight:700;color:var(--muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">5-Year NPV</div>
+      Net Present Value discounted at 10%. Positive NPV = value creation above cost of capital. This is the primary metric for finance committee approval.
+    </div>
+    <div style="padding:10px 12px;background:var(--gray-50);border-radius:6px;border:1px solid var(--gray-100)">
+      <div style="font-family:var(--mono);font-size:10px;font-weight:700;color:var(--muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">IRR</div>
+      The discount rate at which NPV = 0. If IRR exceeds the customer's hurdle rate (typically 8–15%), the investment passes finance review at the headline level.
+    </div>
+    <div style="padding:10px 12px;background:var(--gray-50);border-radius:6px;border:1px solid var(--gray-100)">
+      <div style="font-family:var(--mono);font-size:10px;font-weight:700;color:var(--muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">Cost of Delay</div>
+      Slide 1–24 months to see cumulative value foregone while the decision is pending. Accurate — uses the same ramp curves as the main model. Use it to answer "what if we wait until next quarter?"
+    </div>
+    <div style="padding:10px 12px;background:var(--gray-50);border-radius:6px;border:1px solid var(--gray-100)">
+      <div style="font-family:var(--mono);font-size:10px;font-weight:700;color:var(--muted);margin-bottom:4px;text-transform:uppercase;letter-spacing:.5px">Yr 1 Ramped (in tables)</div>
+      Not the full annual value — the Year 1 value after the benefit type ramp is applied. Always less than Full Annual. See ramp table above.
+    </div>
+  </div>
+
+  <!-- ── EXPORTS ─────────────────────────────────────────────── -->
+  <div id="h-exports" style="font-family:var(--head);font-size:18px;font-weight:700;color:var(--brand-black);margin:28px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--brand-black)">Exports &amp; Outputs</div>
+
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:8px;margin-bottom:16px;font-size:12px">
+    <div style="padding:10px 12px;border-radius:6px;border:1px solid var(--gray-200);border-top:3px solid var(--brand-black)">
+      <div style="font-weight:700;margin-bottom:5px">📄 Export Full Appraisal (PDF)</div>
+      20+ page investment appraisal. Cover, per-scenario deep dives with donut chart and ramp bars, financial model, cash flow chart, NPV/IRR summary, evidence registry. Opens in a new window — use File → Save as PDF.
+    </div>
+    <div style="padding:10px 12px;border-radius:6px;border:1px solid var(--gray-200);border-top:3px solid var(--brand-black)">
+      <div style="font-weight:700;margin-bottom:5px">📊 Export Deck (PPTX)</div>
+      13-slide branded deck. Opens a preview popup — PDF always works from there. Direct .pptx download requires PptxGenJS (already inlined in this build).
+    </div>
+
+    <div style="padding:10px 12px;border-radius:6px;border:1px solid var(--gray-200);border-top:3px solid var(--brand-black)">
+      <div style="font-weight:700;margin-bottom:5px">⬇ Export JSON</div>
+      Complete model state snapshot. All inputs, selections, cost overrides, metadata. Re-importable for handoffs between team members or to resume a saved engagement.
+    </div>
+    <div style="padding:10px 12px;border-radius:6px;border:1px solid var(--gray-200);border-top:3px solid #9333ea">
+      <div style="font-weight:700;margin-bottom:5px">🤖 Copy AI Prompt</div>
+      Copies a full structured brief to your clipboard — customer context, selected scenarios, financials, ramp assumptions, pain signals, and evidence. Paste into Claude, ChatGPT, or any LLM and say <em>"write an exec summary for a CFO meeting"</em> or <em>"what objections should I prepare for?"</em> — it has everything it needs to go straight to work.
+    </div>
+  </div>
+
+  <div class="alert a-info" style="margin-bottom:20px">
+    <span>ℹ</span>
+    <div><strong>Browser note — if downloads get blocked:</strong> Chrome is the recommended browser for all exports. If you're using Safari and the PPTX download shows "Waiting for permission" or nothing happens, either: <strong>(a) switch to Chrome</strong> — easiest, or <strong>(b) allow downloads in Safari</strong> → Settings → Websites → Downloads → find this page → set to <em>Allow</em>. PDF exports and the slide preview work in all browsers regardless.</div>
+  </div>
+
+  <!-- ── EVIDENCE TIERS ─────────────────────────────────────── -->
+  <div id="h-evidence" style="font-family:var(--head);font-size:18px;font-weight:700;color:var(--brand-black);margin:28px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--brand-black)">Evidence — Two Separate Systems</div>
+  <div style="font-size:13px;color:var(--gray-700);margin-bottom:14px;line-height:1.6">The tool uses two different evidence classifications. They are related but not the same thing — it's important to know which one you're looking at.</div>
+
+  <!-- System 1 -->
+  <div style="font-family:var(--mono);font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px">System 1 — Scenario Evidence Strength (●●● on each scenario card)</div>
+  <div style="font-size:12px;color:var(--gray-700);margin-bottom:10px;line-height:1.6">Appears on every scenario as a dot indicator + label. Reflects the <em>overall weight of evidence</em> backing that scenario's quantification — an aggregate judgment across all sources that support it.</div>
+  <div style="display:grid;gap:6px;margin-bottom:20px;font-size:12px">
+    <div style="display:grid;grid-template-columns:160px 1fr;border-radius:6px;overflow:hidden;border:1px solid var(--gray-200)">
+      <div style="background:var(--brand-black);color:#fff;padding:7px 10px;font-family:var(--mono);font-size:10px;font-weight:700">STRENGTH</div>
+      <div style="background:var(--brand-black);color:#fff;padding:7px 10px;font-family:var(--mono);font-size:10px;font-weight:700">WHAT IT MEANS IN A CUSTOMER CONVERSATION</div>
+    </div>
+    <div style="display:grid;grid-template-columns:160px 1fr;border-radius:6px;overflow:hidden;border:1px solid var(--gray-200)">
+      <div style="background:#E2FFB6;padding:8px 10px;font-weight:700">●●● Strong</div>
+      <div style="background:#F0FFD8;padding:8px 10px;color:var(--gray-700)">Multiple independent studies corroborate the benchmark range, including at least one Tier 1 source. Safe to lead with in a CFO conversation. The number is defensible as-is.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:160px 1fr;border-radius:6px;overflow:hidden;border:1px solid var(--gray-200)">
+      <div style="background:#E6E6E6;padding:8px 10px;font-weight:700">●●○ Medium-Strong</div>
+      <div style="background:#F2F2F2;padding:8px 10px;color:var(--gray-700)">Solid Tier 2 benchmark data with consistent directional findings across sources. Minor variability in the range. Use confidently — anchor to the customer's own data wherever possible to strengthen it further.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:160px 1fr;border-radius:6px;overflow:hidden;border:1px solid var(--gray-200)">
+      <div style="background:var(--gray-50);padding:8px 10px;font-weight:700;color:var(--muted)">●○○ Emerging</div>
+      <div style="background:var(--gray-50);padding:8px 10px;color:var(--gray-700)">Practitioner data or early-stage studies. Real directional signal but narrower evidence base. Use as a supporting scenario, not the anchor. The customer's own operational data matters more here than the benchmark.</div>
+    </div>
+  </div>
+
+  <!-- System 2 -->
+  <div style="font-family:var(--mono);font-size:10px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px">System 2 — Source Tier (Tier 1/2/3 in the Evidence Registry)</div>
+  <div style="font-size:12px;color:var(--gray-700);margin-bottom:10px;line-height:1.6">Appears in the Evidence Registry (sidebar). Classifies each individual <em>published source</em> by who produced it and the rigour of their methodology — independent of how many scenarios that source backs.</div>
+  <div style="display:grid;gap:6px;margin-bottom:14px;font-size:12px">
+    <div style="display:grid;grid-template-columns:100px 160px 1fr;border-radius:6px;overflow:hidden;border:1px solid var(--gray-200)">
+      <div style="background:var(--brand-black);color:#fff;padding:7px 10px;font-family:var(--mono);font-size:10px;font-weight:700">TIER</div>
+      <div style="background:var(--brand-black);color:#fff;padding:7px 10px;font-family:var(--mono);font-size:10px;font-weight:700">SOURCE TYPE</div>
+      <div style="background:var(--brand-black);color:#fff;padding:7px 10px;font-family:var(--mono);font-size:10px;font-weight:700">CITATION CREDIBILITY</div>
+    </div>
+    <div style="display:grid;grid-template-columns:100px 160px 1fr;border-radius:6px;overflow:hidden;border:1px solid var(--gray-200)">
+      <div style="background:#E2FFB6;padding:8px 10px;font-weight:700">Tier 1</div>
+      <div style="background:#F0FFD8;padding:8px 10px">Academic / Government</div>
+      <div style="background:#F0FFD8;padding:8px 10px;color:var(--gray-700)">Peer-reviewed research or official government report. Examples: Auburn University RFID Lab, AORN, GAO-25-107427. Citable in board-level presentations without qualification.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:100px 160px 1fr;border-radius:6px;overflow:hidden;border:1px solid var(--gray-200)">
+      <div style="background:#E6E6E6;padding:8px 10px;font-weight:700">Tier 2</div>
+      <div style="background:#F2F2F2;padding:8px 10px">Industry Benchmark</div>
+      <div style="background:#F2F2F2;padding:8px 10px;color:var(--gray-700)">Major industry body, analyst firm, or multi-customer manufacturer study. Examples: ECR Community, NRF, Gartner, Aberdeen Group, ECRI Institute, GE Healthcare. Solid methodology, verifiable range.</div>
+    </div>
+    <div style="display:grid;grid-template-columns:100px 160px 1fr;border-radius:6px;overflow:hidden;border:1px solid var(--gray-200)">
+      <div style="background:var(--gray-50);padding:8px 10px;font-weight:700;color:var(--muted)">Tier 3</div>
+      <div style="background:var(--gray-50);padding:8px 10px;color:var(--muted)">Practitioner / Operator</div>
+      <div style="background:var(--gray-50);padding:8px 10px;color:var(--gray-700)">Vendor white paper, trade association data, or practitioner case study. Examples: GS1 US deployment guides, Zebra / VDC Research. Strong directional signal — best used alongside Tier 1/2 as corroboration.</div>
+    </div>
+  </div>
+
+  <!-- Relationship callout -->
+  <div class="alert a-info" style="margin-bottom:20px">
+    <span>ℹ</span>
+    <div><strong>How they relate:</strong> A scenario tagged <strong>●●● Strong</strong> typically has a Tier 1 source backing it — but what makes it Strong is that <em>multiple</em> sources agree. A scenario can be <strong>Medium-Strong</strong> even with a Tier 1 source if that study only partially covers the use case. And a scenario backed only by Tier 3 sources will always be <strong>Emerging</strong> regardless of how reputable that Tier 3 publisher is. Scenario strength is the aggregate; source tier is per-citation.</div>
+  </div>
+
+  <!-- ── BADGES DECODED ─────────────────────────────────────── -->
+  <div id="h-badges" style="font-family:var(--head);font-size:18px;font-weight:700;color:var(--brand-black);margin:28px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--brand-black)">Badges &amp; Labels Decoded</div>
+
+  <div style="display:grid;gap:6px;margin-bottom:20px;font-size:12px">
+    <div style="display:flex;align-items:center;gap:12px;padding:9px 12px;background:var(--gray-50);border-radius:6px;border:1px solid var(--gray-100)">
+      <span class="badge b-green" style="white-space:nowrap;flex-shrink:0">SLIDERS AUTO-CALC TABLE BELOW</span>
+      <span style="color:var(--gray-700)">Moving any slider rebuilds the line item table. Manual edits are preserved unless you click Reset.</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;padding:9px 12px;background:var(--gray-50);border-radius:6px;border:1px solid var(--gray-100)">
+      <span class="badge b-green" style="white-space:nowrap;flex-shrink:0">EDITABLE — CLICK ANY VALUE</span>
+      <span style="color:var(--gray-700)">Every cell in the cost table — label, cadence, qty, unit cost — is directly editable by clicking on it.</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;padding:9px 12px;background:var(--gray-50);border-radius:6px;border:1px solid var(--gray-100)">
+      <span style="font-family:var(--mono);font-size:10px;font-weight:700;background:#eee;padding:2px 7px;border-radius:3px;white-space:nowrap;flex-shrink:0">YR 1 REFLECTS ADOPTION RAMP</span>
+      <span style="color:var(--gray-700)">The Yr 1 column in scenario tables shows the ramped value — not full annual. It is discounted by the benefit type's Year 1 ramp rate.</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px;padding:9px 12px;background:var(--gray-50);border-radius:6px;border:1px solid var(--gray-100)">
+      <span style="font-family:var(--mono);font-size:10px;font-weight:700;background:#eee;padding:2px 7px;border-radius:3px;white-space:nowrap;flex-shrink:0">CUMULATIVE · 5-YEAR</span>
+      <span style="color:var(--gray-700)">Charts labelled this way show running totals over the 5-year model horizon — not annual snapshots.</span>
+    </div>
+  </div>
+
+  <!-- ── FIELD TIPS ─────────────────────────────────────────── -->
+  <div id="h-tips" style="font-family:var(--head);font-size:18px;font-weight:700;color:var(--brand-black);margin:28px 0 12px;padding-bottom:6px;border-bottom:2px solid var(--brand-black)">Field Tips</div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:24px;font-size:12px">
+    <div style="padding:12px 14px;border-radius:6px;border:1px solid var(--gray-200);border-left:3px solid var(--brand-green)">
+      <div style="font-weight:700;margin-bottom:5px;font-size:12px">Build the hard case first</div>
+      Select 3–4 Hard Labor and Hard Cost scenarios only. If that alone shows positive ROI with payback under 24 months, you have a floor. Revenue and working capital scenarios are all upside from there.
+    </div>
+    <div style="padding:12px 14px;border-radius:6px;border:1px solid var(--gray-200);border-left:3px solid var(--brand-green)">
+      <div style="font-weight:700;margin-bottom:5px;font-size:12px">Use the customer's exact numbers</div>
+      Shrink %, loaded labor rate, and inventory value are almost always available directly from the customer's P&amp;L or controller. Real numbers make the case materially stronger — and much harder to challenge.
+    </div>
+    <div style="padding:12px 14px;border-radius:6px;border:1px solid var(--gray-200);border-left:3px solid var(--brand-green)">
+      <div style="font-weight:700;margin-bottom:5px;font-size:12px">Use the Cost of Delay slider live</div>
+      In a meeting, pull the slider to 3 months when a customer says "let's revisit next quarter." Show the number. Let them do the math. It is a direct calculation, not an estimate.
+    </div>
+    <div style="padding:12px 14px;border-radius:6px;border:1px solid var(--gray-200);border-left:3px solid var(--brand-green)">
+      <div style="font-weight:700;margin-bottom:5px;font-size:12px">Don't include Strategic scenarios in the headline</div>
+      Strategic scenarios (data foundation, AI, digital twin) are real but slow. Including them in a headline ROI without prior alignment invites challenge and can undermine harder, faster scenarios.
+    </div>
+    <div style="padding:12px 14px;border-radius:6px;border:1px solid var(--gray-200);border-left:3px solid var(--brand-green)">
+      <div style="font-weight:700;margin-bottom:5px;font-size:12px">IRR is your insurance number</div>
+      If IRR exceeds the customer's hurdle rate, the investment passes finance review at the headline level. The scenario-by-scenario debate becomes secondary.
+    </div>
+    <div style="padding:12px 14px;border-radius:6px;border:1px solid var(--gray-200);border-left:3px solid var(--brand-green)">
+      <div style="font-weight:700;margin-bottom:5px;font-size:12px">Scope revenue to the right unit</div>
+      Use revenue attributable to the sites in scope — not total group or parent company revenue. A 200-store deployment should use those stores' revenue, not the holding company's.
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <strong>Modeling Disclaimer:</strong> Financial estimates are illustrative projections generated from benchmark data and the parameters you provided. Actual results depend on deployment scope, operational execution, system integration, and market conditions. This tool is intended to support internal business case development and pre-sale discovery &#8212; not to constitute a contractual commitment.
+  </div>
+</div>
+
+</main>
+</div>
+
+<!-- =============== ENGINE DATA =============== -->
